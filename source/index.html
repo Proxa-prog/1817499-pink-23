@@ -7,10 +7,11 @@
   <body class="page__body">
 
     <header class="page-header">
-      <a class="page-header__logo" href="#" >
-        <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
-      </a>
+
       <nav class="main-nav">
+        <a class="page-header__logo" href="#" >
+          <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
+        </a>
         <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="../source/img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
@@ -37,29 +38,31 @@
           </ul>
         </div>
         <div class="main-nav__tagline">
-          <h1>Взгляните на жизнь иначе!</h1>
+          <p>Взгляните на жизнь иначе!</p>
             <img src="img/phone_in_hand.jpg" alt="Мир в розовом цвете" width="320" height="286">
-        </div>
-        <div class="main-nav__download">
-          <button class="main-nav__button-download">Скачать приложение</button>
-          <ul class="main-nav__download-list">
-            <li class="main-nav__apple">
-              <a href="https://www.apple.com/ru/shop"><img src="img/apple_logo.svg" alt="Скачать на Apple" width="47" height="56"></a>
-            </li>
-            <li class="main-nav__android">
-              <a href="https://play.google.com/store?hl=ru&gl=US"><img src="img/android_logo.svg" alt="Скачать на Android" width="43" height="47"></a>
-            </li>
-            <li class="main-nav__microsoft">
-              <a href="https://www.microsoft.com/ru-ru/store/apps/windows"><img src="img/microsoft_logo.svg" alt="Скачать на Microsoft" width="44" height="41"></a>
-            </li>
-          </ul>
-          <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </nav>
     </header>
 
     <main class="page-main">
 
+      <h1 class="visually-hidden">Приложение Pink</h1>
+
+      <div class="page-main__download">
+        <button class="page-main__button-download"><a href="https://www.apple.com/ru/shop">Скачать приложение</a></button>
+        <ul class="page-main__download-list">
+          <li class="page-main__apple">
+            <a href="https://www.apple.com/ru/shop"><img src="img/apple_logo.svg" alt="Скачать на Apple" width="47" height="56"></a>
+          </li>
+          <li class="page-main__android">
+            <a href="https://play.google.com/store?hl=ru&gl=US"><img src="img/android_logo.svg" alt="Скачать на Android" width="43" height="47"></a>
+          </li>
+          <li class="page-main__microsoft">
+            <a href="https://www.microsoft.com/ru-ru/store/apps/windows"><img src="img/microsoft_logo.svg" alt="Скачать на Microsoft" width="44" height="41"></a>
+          </li>
+        </ul>
+        <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
       <section class="offer">
         <h2 class="visually-hidden">Предложение</h2>
         <div class="offer-tagline">
@@ -175,7 +178,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <img src="img/footer_logo.jpg" alt="Логотип PINK" width="145" height="40">
+          <img src="img/footer_logo.svg" alt="Логотип PINK" width="145" height="40">
         </div>
         <div class="page-footer__social">
           <ul class="page-footer__lists">
