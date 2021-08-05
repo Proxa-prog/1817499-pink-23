@@ -1,0 +1,35 @@
+.offer {
+  background-color: @color-grey;
+}
+
+.offer-tagline {
+  width: 100%;
+  min-height: 250px;
+  padding: 46px 20px 70px 20px;
+  box-sizing: border-box;
+
+  p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 120%;
+  }
+}
+
+.offer-list {
+  min-height: 828px;
+  .ul_style ();
+  background-image: url("/img/phone_smile.jpg"), url("/img/grey_background.svg");  //как сделать, чтобы фон наезжал на другой? (Верх серого фона)
+  background-repeat: no-repeat;
+  background-position: bottom, center; //как сделать, чтобы фон наезжал на другой?(Низ телефона)
+
+  .offer-list__item {
+    width: 280px;
+    height: 96px;
+    margin: auto;
+    margin-bottom: 43px;
+  }
+}
+
+.offer-reasons__header {
+  font-weight: bold;
+}
