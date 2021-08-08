@@ -1,5 +1,5 @@
 .offer {
-  background-color: @color-grey;
+  background: @color-white;
 }
 
 .offer__tagline {
@@ -7,7 +7,7 @@
   min-height: 250px;
   padding: 46px 20px 70px 20px;
   box-sizing: border-box;
-  background-color: @color-white;
+  background: linear-gradient(170deg, @color-white 80%, @color-grey 20%);
 
   p {
     font-size: 24px;
@@ -19,9 +19,11 @@
 .offer__list {
   min-height: 828px;
   .ul_style();
-  background-image: url("../img/phone_smile.jpg"), url("../img/grey_background.svg");  //как сделать, чтобы фон наезжал на другой? (Верх серого фона)
+  background-color: @color-grey;
+  background-image: url("../img/phone_smile.png");
   background-repeat: no-repeat;
-  background-position: bottom, center; //как сделать, чтобы фон наезжал на другой?(Низ телефона)
+  background-position: 50% 110%;
+  margin-top: -16px;
 }
 
 .offer-list__item {
