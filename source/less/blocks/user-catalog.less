@@ -1,0 +1,37 @@
+.user-catalog {
+  min-height: 2430px;
+}
+
+.user-catalog__list {
+  .ul_style();
+  margin-top: 50px;
+}
+
+.user-catalog__item {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:not(:first-of-type) {
+    margin: 0 20px 20px 20px;
+  }
+}
+
+.user-catalog__review {
+  margin: 0 20px 20px 20px;
+}
+
+.user-catalog__like {
+  width: 13px;
+  height: 12px;
+  border: none;
+  margin-right: 20px;
+  margin-top: 2px;
+  padding-left: 0;
+}
+
+.user-catalog__how-much-like {
+  margin-top: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: @color-pink;
+}

@@ -1,0 +1,44 @@
+.user-achievements__list {
+  .ul_style();
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+
+
+  .user-achievements__item {
+    margin-bottom: 49px;
+  }
+}
+
+.user-achievements__label {
+  margin-left: 59px;
+  position: relative;
+  display: block;
+}
+
+.user-achievements__input {
+  & + label::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: @color-white;
+    border: 2px solid @color-border-grey;
+    border-radius: 1px;
+    left: -55px;
+    top: -5px;
+  }
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 16px;
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    left: -45px;
+    top: 5px;
+    bottom: 15px;
+  }
+}

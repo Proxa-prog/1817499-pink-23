@@ -1,0 +1,63 @@
+.user-os {
+  min-height: 340px;
+  background-color: @color-grey;
+  padding-top: 42px;
+  box-sizing: border-box;
+
+  fieldset {
+    border: none;
+  }
+}
+
+.user-os__heading {
+  line-height: 18px;
+  color: @color-pink;
+  width: 178px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.user-os__list {
+  .ul_style();
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.user-os__item {
+  margin-bottom: 52px;
+
+  &:last-child {
+    margin-bottom: 44px;
+  }
+
+  .user-os__label {
+    margin-left: 80px;
+    position: relative;
+  }
+}
+
+.user-os__input {
+  & + label::before {
+    content: "";
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    background: @color-white;
+    border: 2px solid @color-border-grey;
+    border-radius: 50%;
+    top: -8px;
+    left: -65px;
+  }
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: @color-pink;
+    border-radius: 50%;
+    top: 5px;
+    left: -52px;
+  }
+}
