@@ -7,6 +7,15 @@
   width: 280px;
   min-height: 160px;
   margin: auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    .reviews__item-title {
+      order: 2;
+    }
+  }
 }
 
 .reviews__wrapper {

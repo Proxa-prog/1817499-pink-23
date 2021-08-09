@@ -23,7 +23,7 @@
   margin-bottom: 41px;
 }
 
-.page-main__download {
+.page-main__download {  //не понимаю как расположить этот блок, ведь по макету он в header. Не проще его тоже в header расположить?
   background-color: @color-black;
   height: 271px;
   padding-top: 49px;
@@ -34,6 +34,11 @@
     color: @color-white;
     font-weight: 300;
     margin: auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    background: none;
   }
 }
 
