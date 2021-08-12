@@ -1,6 +1,16 @@
 .page-footer {
-  width: 100%;
+  width: 320px;
   min-height: 284px;
+  background-color: @color-white;
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 660px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
 }
 
 .page-footer__logo {
@@ -51,11 +61,13 @@
 
 .page-footer__wrapper {
   @media (min-width: @tablet-width) {
+    width: 660px;
     display: flex;
     flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
+    width: 1200px;
     display: flex;
     flex-wrap: wrap;
   }
