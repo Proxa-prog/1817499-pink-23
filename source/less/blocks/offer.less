@@ -1,5 +1,9 @@
 .offer {
   background: @color-white;
+
+  @media (min-width: @tablet-width) {
+    min-height: 725px;
+  }
 }
 
 .offer__tagline {
@@ -17,20 +21,52 @@
 }
 
 .offer__list {
-  min-height: 828px;
   .ul_style();
+}
+
+.offer__container {
+  min-height: 828px;
   background-color: @color-grey;
   background-image: url("../img/phone_smile.png");
   background-repeat: no-repeat;
   background-position: 50% 110%;
   margin-top: -16px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 482px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 955px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
-.offer-list__item {
+.offer__item {
   width: 280px;
   height: 96px;
   margin: auto;
   margin-bottom: 43px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    &:nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+  }
 }
 
 .offer__header {
