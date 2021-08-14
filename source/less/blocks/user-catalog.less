@@ -5,6 +5,16 @@
 .user-catalog__list {
   .ul_style();
   margin-top: 50px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .user-catalog__item {
@@ -14,10 +24,48 @@
   &:not(:first-of-type) {
     margin: 0 20px 20px 20px;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 455px;
+
+    &:not(:first-of-type) {
+      margin: 0;
+      margin-top: 20px;
+    }
+
+    &:first-child { //как выделить отдельно,чтобы растянуть на всю страницу?
+      width: 100%;
+    }
+
+    &:nth-child(2n + 2) {
+      margin-right: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    height: 555px;
+
+    &:nth-child(2n + 2) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &:nth-child(2n + 5) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &:nth-child(3n + 3) {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
 }
 
 .user-catalog__review {
-  margin: 0 20px 20px 20px;
+  margin-bottom: 20px;
 }
 
 .user-catalog__like {
@@ -34,4 +82,24 @@
   font-size: 12px;
   text-transform: uppercase;
   color: @color-pink;
+}
+
+.user-catalog__picture {
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 300px;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    height: 400px;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
 }
