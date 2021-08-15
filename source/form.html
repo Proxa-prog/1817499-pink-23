@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Форма</title>
@@ -10,39 +11,40 @@
 
       <header class="page-header page-header-form">
 
-        <nav class="main-nav">
-            <a class="page-header__logo" href="index.html" >
+        <div class="page-header__wrapper">
+          <nav class="main-nav">
+            <a class="page-header__logo" href="#" >
               <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
             </a>
             <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list">
-                <li class="main-nav__list-item main-nav__list-item-current">
-                  <a href="index.html">
-                    Главная
-                  </a>
-                </li>
-                <li class="main-nav__list-item">
-                  <a href="catalog.html">
-                    Фотографии
-                  </a>
-                </li>
-                <li class="main-nav__list-item">
-                  <a>
-                    Конкурс
-                  </a>
-                </li>
-                <li class="main-nav__list-item">
-                  <a href="https://htmlacademy.ru/study">
-                    Html Academy
-                  </a>
-                </li>
-              </ul>
+            <div class="main-nav__wrapper visually-hidden">
+                <ul class="main-nav__list">
+                  <li class="main-nav__list-item">
+                  </li>
+                  <li class="main-nav__list-item main-nav__list-item-current">
+                    <a>
+                      Главная
+                    </a>
+                  </li>
+                  <li class="main-nav__list-item">
+                    <a href="catalog.html">
+                      Фотографии
+                    </a>
+                  </li>
+                  <li class="main-nav__list-item">
+                    <a href="form.html">
+                      Конкурс
+                    </a>
+                  </li>
+                  <li class="main-nav__list-item">
+                    <a href="https://htmlacademy.ru/study">
+                      Html Academy
+                    </a>
+                  </li>
+                </ul>
             </div>
-            <div class="main-nav__tagline">
-              <p>Конкурс на самое безбашенное путешествие с Пинк</p>
-            </div>
-        </nav>
+          </nav>
+        </div>
       </header>
 
       <main class="page-main">

@@ -11,38 +11,40 @@
 
       <header class="page-header">
 
-        <nav class="main-nav">
-          <a class="page-header__logo" href="#" >
-            <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
-          </a>
-          <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__list-item">
-              </li>
-              <li class="main-nav__list-item main-nav__list-item-current">
-                <a>
-                  Главная
-                </a>
-              </li>
-              <li class="main-nav__list-item">
-                <a href="catalog.html">
-                  Фотографии
-                </a>
-              </li>
-              <li class="main-nav__list-item">
-                <a href="form.html">
-                  Конкурс
-                </a>
-              </li>
-              <li class="main-nav__list-item">
-                <a href="https://htmlacademy.ru/study">
-                  Html Academy
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <div class="page-header__wrapper">
+          <nav class="main-nav">
+            <a class="page-header__logo" href="#" >
+              <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
+            </a>
+            <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
+            <div class="main-nav__wrapper visually-hidden">
+                <ul class="main-nav__list">
+                  <li class="main-nav__list-item">
+                  </li>
+                  <li class="main-nav__list-item main-nav__list-item-current">
+                    <a>
+                      Главная
+                    </a>
+                  </li>
+                  <li class="main-nav__list-item">
+                    <a href="catalog.html">
+                      Фотографии
+                    </a>
+                  </li>
+                  <li class="main-nav__list-item">
+                    <a href="form.html">
+                      Конкурс
+                    </a>
+                  </li>
+                  <li class="main-nav__list-item">
+                    <a href="https://htmlacademy.ru/study">
+                      Html Academy
+                    </a>
+                  </li>
+                </ul>
+            </div>
+          </nav>
+        </div>
 
           <p class="page-header__tagline">Взгляните на жизнь иначе!</p>
 
@@ -76,8 +78,8 @@
                 <p>Нам есть, что вам предложить!</p>
               </div>
 
-              <div class="offer__container">
-                <div class="content-wrapper">
+              <div class="content-wrapper">
+                <div class="offer__container">
                   <ul class="offer__list">
                       <li class="offer__item">
                         <div class="offer-reasons">
@@ -130,38 +132,40 @@
           </section>
 
           <section class="price-list">
-            <h2 class="visually-hidden">Выбор тарифа</h2>
-            <table class="price-list__table">
-              <tr class="price-list__header table-header">
-                <th class="table-header__item"></th>
-                <th class="price-list__base-header table-header__item">База<br><span>1,99 USD</span></th>
-                <th class="table-header__item">Стандарт<br><span>3,99 USD</span></th>
-                <th class="table-header__item">Анлим<br><span>9,99 USD</span></th>
-              </tr>
-              <tr class="price-list__first-line">
-                <td></td>
-                <td></td>
-                <td class="price-list__base-first-line">Розовый фильтр</td>
-                <td></td>
-              </tr>
-              <tr class="price-list__second-line">
-                <td></td>
-                <td></td>
-                <td class="price-list__base-second-line">Смайлики</td>
-                <td></td>
-              </tr>
-              <tr class="price-list__third-line">
-                <td></td>
-                <td></td>
-                <td class="price-list__base-third-line">Комментарии</td>
-                <td></td>
-              </tr>
-            </table>
-            <p class="price-list__toggles price-list__slider-toggles">
-              <button class="price-list__toggle">1</button>
-              <button class="price-list__toggle price-list__toggle-current">2</button>
-              <button class="price-list__toggle">3</button>
-            </p>
+            <div class="content-wrapper">
+              <h2 class="visually-hidden">Выбор тарифа</h2>
+              <table class="price-list__table">
+                <tr class="price-list__header table-header">
+                  <th class="table-header__item"></th>
+                  <th class="price-list__base-header table-header__item">База<br><span>1,99 USD</span></th>
+                  <th class="table-header__item">Стандарт<br><span>3,99 USD</span></th>
+                  <th class="table-header__item">Анлим<br><span>9,99 USD</span></th>
+                </tr>
+                <tr class="price-list__first-line">
+                  <td></td>
+                  <td></td>
+                  <td class="price-list__base-first-line">Розовый фильтр</td>
+                  <td></td>
+                </tr>
+                <tr class="price-list__second-line">
+                  <td></td>
+                  <td></td>
+                  <td class="price-list__base-second-line">Смайлики</td>
+                  <td></td>
+                </tr>
+                <tr class="price-list__third-line">
+                  <td></td>
+                  <td></td>
+                  <td class="price-list__base-third-line">Комментарии</td>
+                  <td></td>
+                </tr>
+              </table>
+              <p class="price-list__toggles price-list__slider-toggles">
+                <button class="price-list__toggle">1</button>
+                <button class="price-list__toggle price-list__toggle-current">2</button>
+                <button class="price-list__toggle">3</button>
+              </p>
+            </div>
           </section>
 
           <section class="contacts">
