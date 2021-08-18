@@ -1,13 +1,17 @@
 .main-nav {
-  height: 66px;
-  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 66px;
 
   @media (min-width: @tablet-width) {
-    height: 110px;
+    min-height: 110px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 110px;
+    min-height: 110px;
+    box-sizing: border-box;
+    width: 1200px;
+    padding: 114px 130px 130px 130px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
