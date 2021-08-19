@@ -16,9 +16,9 @@
             <a class="page-header__logo" href="#" >
               <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
             </a>
-            <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
+            <button class="main-nav__toggle main-nav__toggle-closed"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
             <div class="main-nav__wrapper">
-                <ul class="main-nav__list">
+                <ul class="main-nav__list-closed">
                   <li class="main-nav__list-item">
                   </li>
                   <li class="main-nav__list-item main-nav__list-item-current">
@@ -46,25 +46,27 @@
           </nav>
         </div>
 
+        <div class="content-wrapper">
           <p class="page-header__tagline">Взгляните на жизнь иначе!</p>
+        </div>
 
-          <div class="page-header__download">
-            <div class="content-wrapper">
-              <a class="page-header__button-download" href="https://www.apple.com/ru/shop">Скачать приложение</a>
-              <ul class="page-header__download-list">
-                <li class="page-header__apple">
-                  <a href="https://www.apple.com/ru/shop"><img src="img/apple_logo.svg" alt="Скачать на Apple" width="47" height="56"></a>
-                </li>
-                <li class="page-header__android">
-                  <a href="https://play.google.com/store?hl=ru&gl=US"><img src="img/android_logo.svg" alt="Скачать на Android" width="43" height="47"></a>
-                </li>
-                <li class="page-header__microsoft">
-                  <a href="https://www.microsoft.com/ru-ru/store/apps/windows"><img src="img/microsoft_logo.svg" alt="Скачать на Microsoft" width="44" height="41"></a>
-                </li>
-              </ul>
-              <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-            </div>
+        <div class="page-header__download">
+          <div class="content-wrapper">
+            <a class="page-header__button-download" href="https://www.apple.com/ru/shop">Скачать приложение</a>
+            <ul class="page-header__download-list">
+              <li class="page-header__apple">
+                <a href="https://www.apple.com/ru/shop"><img src="img/apple_logo.svg" alt="Скачать на Apple" width="47" height="56"></a>
+              </li>
+              <li class="page-header__android">
+                <a href="https://play.google.com/store?hl=ru&gl=US"><img src="img/android_logo.svg" alt="Скачать на Android" width="43" height="47"></a>
+              </li>
+              <li class="page-header__microsoft">
+                <a href="https://www.microsoft.com/ru-ru/store/apps/windows"><img src="img/microsoft_logo.svg" alt="Скачать на Microsoft" width="44" height="41"></a>
+              </li>
+            </ul>
+            <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
           </div>
+        </div>
       </header>
 
       <main class="page-main">
@@ -78,9 +80,9 @@
                 <p>Нам есть, что вам предложить!</p>
               </div>
 
-
-                <div class="offer__container">
-                  <div class="content-wrapper">
+              <div class="offer__wrapper">
+                <div class="content-wrapper">
+                  <div class="offer__container">
                     <ul class="offer__list">
                         <li class="offer__item">
                           <div class="offer-reasons">
@@ -109,6 +111,20 @@
                     </ul>
                   </div>
                 </div>
+              </div>
+
+              <div class="offer__effect effect">
+                <div class="content-wrapper">
+                  <div class="effect__container">
+                    <h2 class="effect__header">Эффект<br> на 24 часа!</h2>
+                    <p class="effect__discription">
+                      Британские учёные провели исследования и доказали, что положительный
+                      эффект от использования приложения длится целые сутки!
+                    </p>
+                    <a class="effect__more-details" href="#" >Узнать больше об исследовании</a>
+                  </div>
+                </div>
+              </div>
 
           </section>
 
@@ -119,15 +135,16 @@
                 <ul class="reviews__list slider__list">
                   <li class="reviews__item slider__item">
                     <h3 class="reviews__item-title">Николай Петров</h3>
+                    <p class="reviews__title-caption">25 лет, водитель травмвая</p>
                     <p class="reviews__item-discription">
                       &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
                     </p>
                   </li>
                 </ul>
                 <p class="reviews__toggles slider__toggles">
-                  <button class="reviews__toggle reviews__toggle--current">1</button>
-                  <button class="reviews__toggle">2</button>
-                  <button class="reviews__toggle">3</button>
+                  <button class="reviews__toggle reviews__toggle--current"></button>
+                  <button class="reviews__toggle"></button>
+                  <button class="reviews__toggle"></button>
                 </p>
               </div>
             </div>
@@ -144,21 +161,21 @@
                   <th class="table-header__item">Анлим<br><span>9,99 USD</span></th>
                 </tr>
                 <tr class="price-list__first-line">
+                  <td>Розовый фильтр</td>
                   <td></td>
-                  <td></td>
-                  <td class="price-list__base-first-line">Розовый фильтр</td>
+                  <td class="price-list__base-first-line"></td>
                   <td></td>
                 </tr>
                 <tr class="price-list__second-line">
+                  <td>Смайлики</td>
                   <td></td>
-                  <td></td>
-                  <td class="price-list__base-second-line">Смайлики</td>
+                  <td class="price-list__base-second-line"></td>
                   <td></td>
                 </tr>
                 <tr class="price-list__third-line">
+                  <td>Комментарии</td>
                   <td></td>
-                  <td></td>
-                  <td class="price-list__base-third-line">Комментарии</td>
+                  <td class="price-list__base-third-line"></td>
                   <td></td>
                 </tr>
               </table>
@@ -191,7 +208,7 @@
             </div>
             <div class="map">
               <h2 class="visually-hidden">Карта</h2>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533252!2d30.320858716276664!3d59.938716481876185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627127366129!5m2!1sru!2sru" width="320" height="200" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533252!2d30.320858716276664!3d59.938716481876185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627127366129!5m2!1sru!2sru" width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </section>
       </main>
@@ -229,5 +246,25 @@
           </div>
         </div>
       </footer>
+
+      <script>
+        let mainNav = document.querySelector(".main-nav__toggle");
+        let navList = document.querySelector(".main-nav__list-closed");
+
+        mainNav.addEventListener("click", function() {
+          if(mainNav.classList.contains("main-nav__toggle-closed")) {
+            mainNav.classList.remove("main-nav__toggle-closed");
+            mainNav.classList.add("main-nav__toggle-open");
+            navList.classList.remove("main-nav__list-closed");
+            navList.classList.add("main-nav__list");
+          }else{
+            mainNav.classList.remove("main-nav__toggle-open");
+            mainNav.classList.add("main-nav__toggle-closed");
+            navList.classList.remove("main-nav__list");
+            navList.classList.add("main-nav__list-closed");
+          }
+        })
+      </script>
+
   </body>
 </html>

@@ -1,6 +1,5 @@
 .price-list {
   width: 100%;
-  min-height: 506px;
   background-image: url("../img/grey_background_price.svg");
   background-size: cover;
   background-color: @color-grey;
@@ -10,10 +9,69 @@
 .price-list__table {
   min-height: 279px;
 
-  td {
-    width: 276px;
-    height: 59px;
-    background: @color-white;
-    border: 2px solid @color-border-grey;
+  & th {
+    text-transform: uppercase;
   }
+
+  @media (min-width: @tablet-width) {
+    td {
+      width: 25%;
+      height: 59px;
+      background: @color-white;
+      border: 2px solid @color-border-grey;
+    }
+
+    .price-list__first-line td:not(:nth-child(1)) {
+      background-image: url("../img/yes.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    .price-list__second-line td:not(:nth-child(1)) {
+      background-image: url("../img/yes.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    .price-list__second-line td:nth-child(2) {
+      background-image: url("../img/no.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    .price-list__third-line td:not(:nth-child(1)) {
+      background-image: url("../img/no.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    .price-list__third-line td:nth-child(4) {
+      background-image: url("../img/yes.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+.table-header__item:nth-child(1) {
+  background-color: inherit;
+}
+
+.price-list__toggle {
+  margin-right: 19px;
+  width: 6px;
+  height: 6px;
+  background: #283645;
+  border-radius: 50%;
+  border: 1px solid @color-text-black;
+  opacity: 0.3;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.price-list__toggle-current {
+  border: 3px solid @color-text-black;
+  background-color: @color-white;
+  opacity: 1;
+  cursor: pointer;
 }

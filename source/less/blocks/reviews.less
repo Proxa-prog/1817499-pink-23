@@ -11,13 +11,57 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    width: 620px;
 
     .reviews__item-title {
       order: 2;
+      margin: 0 auto;
     }
   }
 }
 
 .reviews__wrapper {
   background: linear-gradient(175deg, @color-white 90%, @color-grey 10%);
+}
+
+.reviews__item-discription {
+  & br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    & br {
+      display: inline;
+    }
+  }
+}
+
+.reviews__title-caption {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 500px;
+    order: 3;
+    margin: 17px auto;
+  }
+}
+
+.reviews__toggle {
+  margin-right: 19px;
+  width: 6px;
+  height: 6px;
+  background: #283645;
+  border-radius: 50%;
+  border: 1px solid #283645;
+  opacity: 0.3;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.reviews__toggle--current {
+  border: 3px solid #283645;
+  background-color: @color-white;
+  opacity: 1;
+  cursor: pointer;
 }

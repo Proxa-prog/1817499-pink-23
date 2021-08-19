@@ -11,6 +11,8 @@
     height: 729px;
     background-size: 80%, cover;
     background-position: 150% 100%, center;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
   }
 
   @media (min-width: @desktop-width) {
@@ -31,6 +33,19 @@
   font-style: normal;
   font-size: 24px;
   line-height: 120%;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1/2;
+    margin: 0;
+    margin-left: 48px;
+    margin-right: 48px;
+    width: 206px;
+    font-size: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .page-header__logo {
@@ -55,8 +70,11 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 300px;
     display: flex;
     background: none;
+    grid-column: 1/2;
+    margin: 0;
   }
 }
 
