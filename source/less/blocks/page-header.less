@@ -2,8 +2,8 @@
   background-image: url("../img/phone_in_arm.png"), url("../img/back-mobile.jpg");
   background-color: #092a43;
   background-repeat: no-repeat, no-repeat;
-  background-size: auto, auto;
-  background-position: 50% 62%, center;
+  background-size: auto, contain;
+  background-position: 50% 42%, center top;
   min-height: 733px;
   color: @color-white;
 
@@ -18,6 +18,10 @@
   @media (min-width: @desktop-width) {
     height: 853px;
   }
+}
+
+.page-header--nojs {
+  background-position: 50% 62%, center;
 }
 
 .page-header__wrapper {
@@ -52,6 +56,7 @@
   position: absolute;
   top: 22px;
   left: 20px;
+  z-index: 2;
 }
 
 .page-header__download {

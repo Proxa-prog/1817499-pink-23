@@ -4,13 +4,60 @@
   background-size: cover;
   background-color: @color-grey;
   margin-top: -14px;
+  padding-top: 112px;
+  padding-bottom: 100px;
 }
 
 .price-list__table {
+  width: 832px; // Как расположить, чтобы не ломалось всё?
+  position: relative;
+  left: -360px;
   min-height: 279px;
 
   & th {
     text-transform: uppercase;
+    width: 280px;
+  }
+
+  & td {
+    width: 280px; // Затрудняюсь растянуть на контентную ширину.
+    height: 59px;
+    background: @color-white;
+    border: 2px solid @color-border-grey;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .price-list__first-line td:not(:nth-child(1)) {
+    background-image: url("../img/yes.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+  }
+
+  .price-list__second-line td:not(:nth-child(1)) {
+    background-image: url("../img/yes.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+  }
+
+  .price-list__second-line td:nth-child(2) {
+    background-image: url("../img/no.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+  }
+
+  .price-list__third-line td:not(:nth-child(1)) {
+    background-image: url("../img/no.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+  }
+
+  .price-list__third-line td:nth-child(4) {
+    background-image: url("../img/yes.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
   }
 
   @media (min-width: @tablet-width) {
@@ -19,6 +66,10 @@
       height: 59px;
       background: @color-white;
       border: 2px solid @color-border-grey;
+
+      & span {
+        display: none;
+      }
     }
 
     .price-list__first-line td:not(:nth-child(1)) {
@@ -67,6 +118,10 @@
   opacity: 0.3;
   padding: 4px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .price-list__toggle-current {

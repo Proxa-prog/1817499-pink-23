@@ -32,8 +32,12 @@
   }
 }
 
-.main-nav__list-closed {
+.main-nav__list--closed {
   display: none;
+}
+
+.main-nav__list--open {
+  position: fixed;
 }
 
 .main-nav__list-item {
@@ -66,24 +70,26 @@
   }
 }
 
-.main-nav__toggle-closed {
+.main-nav__toggle--closed {
   position: absolute;
   top: 21px;
   right: 20px;
   border: none;
   background-color: transparent;
+  z-index: 2;
 
   @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
-.main-nav__toggle-open {
+.main-nav__toggle--open {
   position: absolute;
   top: 30px;
   right: 40px;
   background-color: transparent;
   border: none;
+  z-index: 2;
 
   &::before,
   &::after {
@@ -107,10 +113,6 @@
   }
 }
 
-.main-nav__toggle-nojs .main-nav__toggle {
-  display: none;
-}
-
-.main-nav__toggle-nojs .page-header__logo-image { //как корректно убрать?
+.main-nav--nojs .main-nav__toggle--closed {
   display: none;
 }

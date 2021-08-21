@@ -9,16 +9,16 @@
   </head>
   <body class="page__body">
 
-      <header class="page-header">
+      <header class="page-header page-header--nojs">
 
         <div class="page-header__wrapper">
-          <nav class="main-nav">
+          <nav class="main-nav main-nav--nojs">
             <a class="page-header__logo" href="#" >
               <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
             </a>
-            <button class="main-nav__toggle main-nav__toggle-closed"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
+            <button class="main-nav__toggle--closed"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
             <div class="main-nav__wrapper">
-                <ul class="main-nav__list-closed">
+                <ul class="main-nav__list">
                   <li class="main-nav__list-item">
                   </li>
                   <li class="main-nav__list-item main-nav__list-item-current">
@@ -151,7 +151,6 @@
           </section>
 
           <section class="price-list">
-            <div class="content-wrapper">
               <h2 class="visually-hidden">Выбор тарифа</h2>
               <table class="price-list__table">
                 <tr class="price-list__header table-header">
@@ -163,28 +162,27 @@
                 <tr class="price-list__first-line">
                   <td>Розовый фильтр</td>
                   <td></td>
-                  <td class="price-list__base-first-line"></td>
+                  <td class="price-list__base-first-line"><span>Розовый фильтр</span></td>
                   <td></td>
                 </tr>
                 <tr class="price-list__second-line">
                   <td>Смайлики</td>
                   <td></td>
-                  <td class="price-list__base-second-line"></td>
+                  <td class="price-list__base-second-line"><span>Смайлики</span></td>
                   <td></td>
                 </tr>
                 <tr class="price-list__third-line">
                   <td>Комментарии</td>
                   <td></td>
-                  <td class="price-list__base-third-line"></td>
+                  <td class="price-list__base-third-line"><span>Комментарии</span></td>
                   <td></td>
                 </tr>
               </table>
               <p class="price-list__toggles price-list__slider-toggles">
-                <button class="price-list__toggle">1</button>
-                <button class="price-list__toggle price-list__toggle-current">2</button>
-                <button class="price-list__toggle">3</button>
+                <button class="price-list__toggle"></button>
+                <button class="price-list__toggle price-list__toggle-current"></button>
+                <button class="price-list__toggle"></button>
               </p>
-            </div>
           </section>
 
           <section class="contacts">
@@ -248,20 +246,26 @@
       </footer>
 
       <script>
-        let mainNav = document.querySelector(".main-nav__toggle");
-        let navList = document.querySelector(".main-nav__list-closed");
+        let mainNavToggle = document.querySelector(".main-nav__toggle--closed");
+        let navList = document.querySelector(".main-nav__list");
+        let mainNav = document.querySelector(".main-nav");
+        let pageHeader = document.querySelector(".page-header");
+
+        pageHeader.classList.remove("page-header--nojs");
+        mainNav.classList.remove("main-nav--nojs");
+        navList.classList.add("main-nav__list--closed"); // Как сделать, чтобы на desktop меню было открыто?
 
         mainNav.addEventListener("click", function() {
-          if(mainNav.classList.contains("main-nav__toggle-closed")) {
-            mainNav.classList.remove("main-nav__toggle-closed");
-            mainNav.classList.add("main-nav__toggle-open");
-            navList.classList.remove("main-nav__list-closed");
-            navList.classList.add("main-nav__list");
+          if(mainNavToggle.classList.contains("main-nav__toggle--closed")) {
+            mainNavToggle.classList.remove("main-nav__toggle--closed");
+            mainNavToggle.classList.add("main-nav__toggle--open");
+            navList.classList.remove("main-nav__list--closed");
+            navList.classList.add("main-nav__list--open");
           }else{
-            mainNav.classList.remove("main-nav__toggle-open");
-            mainNav.classList.add("main-nav__toggle-closed");
-            navList.classList.remove("main-nav__list");
-            navList.classList.add("main-nav__list-closed");
+            mainNavToggle.classList.remove("main-nav__toggle--open");
+            mainNavToggle.classList.add("main-nav__toggle--closed");
+            navList.classList.remove("main-nav__list--open");
+            navList.classList.add("main-nav__list--closed");
           }
         })
       </script>
