@@ -9,7 +9,7 @@
     min-height: 110px;
     box-sizing: border-box;
     width: 1200px;
-    padding: 114px 130px 130px 130px;
+    padding: 0 130px 0 130px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -34,6 +34,10 @@
 
 .main-nav__list--closed {
   display: none;
+
+  @media (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .main-nav__list--open {
@@ -67,6 +71,14 @@
     background: none;
     border: none;
     box-shadow: none;
+    line-height: 18px;
+    text-transform: none;
+
+    a {
+      line-height: 18px;
+      text-transform: none;
+      font-weight: 400;
+    }
   }
 }
 
