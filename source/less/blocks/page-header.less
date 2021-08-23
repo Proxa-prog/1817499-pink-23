@@ -2,24 +2,40 @@
   background-image: url("../img/phone_in_arm.png"), url("../img/back-mobile.jpg");
   background-color: #092a43;
   background-repeat: no-repeat, no-repeat;
-  background-size: auto, auto;
-  background-position: 50% 62%, center;
+  background-size: auto, contain;
+  background-position: 50% 42%, center top;
   min-height: 733px;
   color: @color-white;
 
   @media (min-width: @tablet-width) {
-    height: 729px;
+    min-height: 729px;
     background-size: 80%, cover;
     background-position: 150% 100%, center;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
   }
 
   @media (min-width: @desktop-width) {
-    height: 853px;
+    min-height: 853px;
   }
+}
+
+.page-header--nojs {
+  background-position: 50% 62%, center;
 }
 
 .page-header__wrapper {
   background-color: rgba(0, 0, 0, 0.3);
+
+  @media (min-width: @tablet-width) {
+    height: 110px;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    min-height: 110px;
+    padding-top: 20px;
+  }
 }
 
 .page-header__tagline {
@@ -31,12 +47,26 @@
   font-style: normal;
   font-size: 24px;
   line-height: 120%;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1/2;
+    margin: 0;
+    margin-left: 48px;
+    margin-right: 48px;
+    width: 206px;
+    font-size: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .page-header__logo {
   position: absolute;
   top: 22px;
   left: 20px;
+  z-index: 2;
 }
 
 .page-header__download {
@@ -55,8 +85,11 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 300px;
     display: flex;
     background: none;
+    grid-column: 1/2;
+    margin: 0;
   }
 }
 

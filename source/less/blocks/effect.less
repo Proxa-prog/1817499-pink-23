@@ -1,0 +1,40 @@
+.effect {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    background-color: @color-white;
+    min-height: 330px;
+  }
+}
+
+.effect__container {
+  background-image: url("../img/timer.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  min-height: 330px;
+}
+
+.effect__header {
+  box-sizing: border-box;
+  padding-top: 102px;
+  margin: 0;
+  line-height: 36px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.effect__discription {
+  width: 297px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.effect__more-details {
+  color: @color-pink;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
