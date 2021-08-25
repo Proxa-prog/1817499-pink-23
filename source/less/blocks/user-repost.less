@@ -1,8 +1,7 @@
-.user-repost__container {
+.user-repost__container {  // Как расположить button не вырывая из потока?
   background-color: @color-grey;
 
   @media (min-width: @desktop-width) {
-    height: 853px;
     width: 940px;
     margin: 0 auto;
   }
@@ -12,6 +11,11 @@
   margin-top: 52px;
   padding-top: 20px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .user-repost__input-file {
@@ -25,10 +29,25 @@
   .ul_style();
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+    height: 165px;
+  }
+}
+
+.user-repost__filter-item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .user-repost__filter-item:nth-child(1) {
-  margin: 24px 17px 39px 57px;
+  margin: 24px 17px 39px 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 11px;
+  }
 }
 
 .user-repost__filter-item:nth-child(2) {
@@ -47,6 +66,14 @@
   margin-left: 40px;
   margin-right: 40px;
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .user-repost__line {
@@ -54,4 +81,22 @@
   height: 1px;
   background: @color-text-black;
   opacity: 0.1;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.user-repost__range-controls {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-top: 21px;
+    padding-left: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
+  }
 }

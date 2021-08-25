@@ -7,6 +7,34 @@
   fieldset {
     border: none;
   }
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+    width: 100%;
+    background-color: @color-white;
+    margin-bottom: 65px;
+
+    fieldset {
+      border: 2px solid @color-border-grey;
+      border-radius: 1px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 45%;
+
+    .content-wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+    }
+
+    fieldset {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
 }
 
 .user-os__heading {

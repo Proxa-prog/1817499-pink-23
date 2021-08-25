@@ -1,6 +1,25 @@
 .page-main__catalog-form {
   min-height: 880px;
   margin-top: 49px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 670px;
+  }
+}
+
+.page-header__users-foto-header {
+  width: 172px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 357px;
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .page-main__catalog-button {
@@ -24,13 +43,26 @@
 }
 
 .page-main__user-achievements {
-  height: 604px;
+  min-height: 604px;
   background-color: @color-grey;
   padding-top: 42px;
   box-sizing: border-box;
 
   fieldset {
     border: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: @color-white;
+
+    fieldset {
+      border: 2px solid @color-border-grey;
+      border-radius: 1px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 228px;
   }
 }
 
@@ -45,6 +77,10 @@
 .page-main__article {
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 422px;
+  }
 }
 
 .page-main__user-comment {
@@ -54,6 +90,16 @@
 
   fieldset {
     border: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    fieldset {
+      border: 2px solid @color-border-grey;
+      border-radius: 1px;
+    }
   }
 
   .page-main__heading {
@@ -77,6 +123,11 @@
   span {
     color: @color-pink;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 183px;
+    margin: 0;            //Непонятный margin у абзаца.
+  }
 }
 
 .page-main__user-contacts {
@@ -84,5 +135,35 @@
 
   fieldset {
     border: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    fieldset {
+      border: 2px solid @color-border-grey;
+      border-radius: 1px;
+    }
+  }
+}
+
+.page-main__form {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 130px;
+    padding-left: 130px;
+    box-sizing: border-box;
+  }
+}
+
+
+.page-main__form-fill-the-form {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }

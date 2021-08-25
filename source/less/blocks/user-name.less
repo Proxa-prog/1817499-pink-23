@@ -1,10 +1,36 @@
 .user-name {
   min-height: 539px;
 
+  @media (min-width: @tablet-width) {
+    order: 0;
+    width: 100%;
+    min-height: 265px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 45%;
+    padding-top: 42px;
+    box-sizing: border-box;
+
+    .content-wrapper {
+      width: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   p {
     width: 280px;
     margin: 54px auto 55px auto;
     line-height: 30px;
+
+    @media (min-width: @tablet-width) {
+      width: 430px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 620px;
+    }
   }
 }
 
@@ -14,13 +40,45 @@
   .user-name__form-item {
     display: flex;
     flex-wrap: wrap;
+
+    @media (min-width: @tablet-width) {
+      &:nth-child(2):last-child { //Не выходит растянуть второй элемент
+        width: 561px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 431px;
+      flex-wrap: nowrap;
+      margin-top: 15px;
+      margin-bottom: 36px;
+    }
   }
+
 
   .user-name__label {
     .label_style();
+
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 37px;
+      text-align: left;
+      padding-top: 15px;
+    }
   }
 
   .user-name__input {
     .input_style();
+
+    @media (min-width: @tablet-width) {
+      width: 521px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 336px;
+    }
   }
 }
