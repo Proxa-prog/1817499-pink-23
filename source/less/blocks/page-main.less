@@ -7,21 +7,6 @@
   }
 }
 
-.page-header__users-foto-header {
-  width: 172px;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 33px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: @tablet-width) {
-    width: 357px;
-    font-size: 50px;
-    line-height: 68px;
-  }
-}
-
 .page-main__catalog-button {
   width: 280px;
   height: 55px;
@@ -32,14 +17,27 @@
   font-size: 18px;
   line-height: 18px;
   color: @color-pink;
+
+  @media (min-width: @desktop-width) {
+    width: 183px;
+  }
 }
 
 .page-main__catalog-button:first-of-type {
   margin-bottom: 12px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+    margin-right: 40px;
+  }
 }
 
 .page-main__catalog-button:last-of-type {
   margin-bottom: 41px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .page-main__user-achievements {
@@ -102,6 +100,12 @@
     }
   }
 
+  @media (min-width: @desktop-width) {
+    fieldset {
+      width: 100%;
+    }
+  }
+
   .page-main__heading {
     line-height: 18px;
     color: @color-pink;
@@ -118,7 +122,6 @@
 .page-main__required {
   line-height: 30px;
   text-transform: uppercase;
-  margin-bottom: 66px;
 
   span {
     color: @color-pink;
@@ -126,7 +129,8 @@
 
   @media (min-width: @tablet-width) {
     width: 183px;
-    margin: 0;            //Непонятный margin у абзаца.
+    margin: 0;
+    margin-left: 0;
   }
 }
 

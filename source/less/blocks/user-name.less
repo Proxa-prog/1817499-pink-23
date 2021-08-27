@@ -9,13 +9,14 @@
 
   @media (min-width: @desktop-width) {
     width: 45%;
-    padding-top: 42px;
+    padding-top: 59px;
     box-sizing: border-box;
 
     .content-wrapper {
-      width: 0;
+      width: 100%;
       margin: 0;
       padding: 0;
+      box-sizing: content-box;
     }
   }
 
@@ -37,22 +38,23 @@
 .user-name__form-list {
   .ul_style();
 
-  .user-name__form-item {
-    display: flex;
-    flex-wrap: wrap;
+  .user-name__input {
+    .input_style();
+    flex-grow: 1;
+    margin-left: 0;
 
     @media (min-width: @tablet-width) {
-      &:nth-child(2):last-child { //Не выходит растянуть второй элемент
-        width: 561px;
-      }
+      margin-left: 20px;
     }
 
     @media (min-width: @desktop-width) {
-      width: 431px;
-      flex-wrap: nowrap;
-      margin-top: 15px;
-      margin-bottom: 36px;
+      margin-bottom: 64px;
     }
+  }
+
+  .user-name__form-item {
+    display: flex;
+    flex-wrap: wrap;
   }
 
 
@@ -67,18 +69,6 @@
       min-width: 37px;
       text-align: left;
       padding-top: 15px;
-    }
-  }
-
-  .user-name__input {
-    .input_style();
-
-    @media (min-width: @tablet-width) {
-      width: 521px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 336px;
     }
   }
 }

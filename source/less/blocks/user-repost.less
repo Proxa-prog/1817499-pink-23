@@ -1,9 +1,16 @@
-.user-repost__container {  // Как расположить button не вырывая из потока?
+.user-repost__container {
   background-color: @color-grey;
 
   @media (min-width: @desktop-width) {
     width: 940px;
     margin: 0 auto;
+
+    .content-wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+    }
   }
 }
 
@@ -13,16 +20,57 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+  }
+}
+
+.user-repost__filter-wrapper {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.user-repost__catalog-button-wrapper {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
     display: flex;
-    flex-wrap: wrap;
+    align-items: flex-end;
   }
 }
 
 .user-repost__input-file {
-  background-image: url("../img/winter.jpg");
-  background-size: cover;
-  width: 280px;
-  min-height: 374px;
+  position: relative;
+  margin-bottom: 348px;
+
+  & + label::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/winter.jpg");
+    background-size: cover;
+    width: 280px;
+    height: 374px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media (min-width: @tablet-width) {
+      transform: translate(-110%, 0);
+    }
+
+    @media (min-width: @desktop-width) {
+      transform: translate(-143%, 0);
+    }
+  }
 }
 
 .user-repost__filter-list {
@@ -32,7 +80,6 @@
 
   @media (min-width: @tablet-width) {
     display: inline;
-    height: 165px;
   }
 }
 
@@ -89,6 +136,7 @@
 
 .user-repost__range-controls {
   display: none;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -98,5 +146,14 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 10px;
+  }
+}
+
+.range-controls-active {
+  display: block;
+  position: absolute;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
   }
 }

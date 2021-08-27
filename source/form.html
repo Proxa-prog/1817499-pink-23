@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Форма</title>
   </head>
   <body class="page__body">
@@ -17,7 +16,7 @@
               <a class="page-header__logo" href="#" >
                 <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
               </a>
-              <button class="main-nav__toggle--closed"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
+              <button class="main-nav__toggle main-nav__toggle--closed"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
             </div>
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list">
@@ -166,8 +165,10 @@
 
                   <textarea class="user-comment__text" aria-label="Опишите свои эмоции" name="user-comment" cols="24" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
                 </fieldset>
-                <button class="page-main__submit button" type="submit">Отправить форму</button>
-                <p class="page-main__required"><span>*</span> &mdash; Обязательные поля</p>
+                <div class="user-comment__sent-wrapper">
+                  <button class="page-main__submit button" type="submit">Отправить форму</button>
+                  <p class="page-main__required"><span>*</span> &mdash; Обязательные поля</p>
+              </div>
               </div>
             </div>
 
