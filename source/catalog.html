@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>Каталог</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
 
@@ -14,7 +18,11 @@
           <nav class="main-nav main-nav--nojs">
             <div class="content-wrapper">
               <a class="page-header__logo" href="#" >
-                <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
+                <picture>
+                  <source media="(min-width: 1200px" srcset="img/logotype_header_desktop.svg">
+                  <source media="(min-width: 660px)" srcset="img/logotype_header_tablet.svg">
+                  <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
+                </picture>
               </a>
               <button class="main-nav__toggle main-nav__toggle--closed"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
             </div>
@@ -63,7 +71,11 @@
           </div>
 
           <div class="user-catalog__panorama-wrapper">
-            <img class="user-catalog__picture user-catalog__panorama" src="img/bridge.jpg" alt="Мост над дорогой" width="320" height="137">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/bridge_desktop.jpg 1x, img/bridge_desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/bridge_tablet.jpg 1x, img/bridge_tablet@2x.jpg 2x">
+              <img class="user-catalog__picture user-catalog__panorama" src="img/bridge.jpg" srcset="img/bridge@2x.jpg" alt="Мост над дорогой" width="320" height="137">
+            </picture>
             <div class="content-wrapper">
               <div class="user-catalog__review catalog-review-panorama">
                 <h3 class="user-catalog__user-name">Анна </h3>
@@ -82,7 +94,11 @@
           <div class="content-wrapper">
             <ul class="user-catalog__list">
               <li class="user-catalog__item">
-                <img class="user-catalog__picture" src="img/car.jpg" alt="Фотосъёмка автомобиля" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/car_desktop.jpg 1x, img/car_desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/car_tablet.jpg 1x, img/car_tablet@2x.jpg 2x">
+                  <img class="user-catalog__picture" src="img/car.jpg" srcset="img/car@2x.jpg" alt="Фотосъёмка автомобиля" width="280" height="180">
+                </picture>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name">Левон </h3>
                   <span class="catalog-review__time">(5 часов назад)</span>
@@ -96,7 +112,11 @@
                 </div>
               </li>
               <li class="user-catalog__item">
-                <img class="user-catalog__picture" src="img/drums.jpg" alt="Барабанная установка" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/drums_desktop.jpg 1x, img/drums_desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/drums_tablet.jpg 1x, img/drums_tablet@2x.jpg 2x">
+                  <img class="user-catalog__picture" src="img/drums.jpg" srcset="img/drums@2x.jpg" alt="Барабанная установка" width="280" height="180">
+                </picture>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name">Антон </h3>
                   <span class="catalog-review__time">(12 часов назад)</span>
@@ -110,7 +130,11 @@
                 </div>
               </li>
               <li class="user-catalog__item">
-                <img class="user-catalog__picture" src="img/glass.jpg" alt="Застеклённый потолок" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/glass_desktop.jpg 1x, img/glass_desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/glass_tablet.jpg 1x, img/glass_tablet@2x.jpg 2x">
+                  <img class="user-catalog__picture" src="img/glass.jpg" srcset="img/glass@2x.jpg" alt="Застеклённый потолок" width="280" height="180">
+                </picture>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name">Борис </h3>
                   <span class="catalog-review__time">(20 часов назад)</span>
@@ -124,7 +148,11 @@
                 </div>
               </li>
               <li class="user-catalog__item">
-                <img class="user-catalog__picture" src="img/fair.jpg" alt="Кубанская ярмарка" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/fair_desktop.jpg 1x, img/fair_desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/fair_tablet.jpg 1x, img/fair_tablet@2x.jpg 2x">
+                  <img class="user-catalog__picture" src="img/fair.jpg" srcset="img/fair@2x.jpg" alt="Кубанская ярмарка" width="280" height="180">
+                </picture>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name">Сергей </h3>
                   <span class="catalog-review__time">(25 часов назад)</span>
@@ -138,7 +166,11 @@
                 </div>
               </li>
               <li class="user-catalog__item">
-                <img class="user-catalog__picture" src="img/mountain.jpg" alt="На вершине горы" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/mountain_desktop.jpg 1x, img/mountain_desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/mountain_tablet.jpg 1x, img/mountain_tablet@2x.jpg 2x">
+                  <img class="user-catalog__picture" src="img/mountain.jpg" srcset="img/mountain@2x.jpg" alt="На вершине горы" width="280" height="180">
+                </picture>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name">Максим </h3>
                   <span class="catalog-review__time">(40 часов назад)</span>
@@ -152,7 +184,11 @@
                 </div>
               </li>
               <li class="user-catalog__item">
-                <img class="user-catalog__picture" src="img/airplane.jpg" alt="Крыло самолёта" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/airplane_desktop.jpg 1x, img/airplane_desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/airplane_tablet.jpg 1x, img/airplane_tablet@2x.jpg 2x">
+                  <img class="user-catalog__picture" src="img/airplane.jpg" srcset="img/airplane@2x.jpg" alt="Крыло самолёта" width="280" height="180">
+                </picture>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name" >Надежда </h3>
                   <span class="catalog-review__time">(45 часов назад)</span>

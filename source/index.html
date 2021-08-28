@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>Pink</title>
   </head>
   <body class="page__body">
@@ -14,8 +18,12 @@
           <nav class="main-nav main-nav--nojs">
             <div class="content-wrapper">
               <a class="page-header__logo" href="#" >
-                <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
-              </a>
+                <picture>
+                  <source media="(min-width: 1200px" srcset="img/logotype_header_desktop.svg">
+                  <source media="(min-width: 660px)" srcset="img/logotype_header_tablet.svg">
+                  <img class="page-header__logo-image" src="img/header_logo_pink.svg" alt="Логотип" width="74" height="23">
+                </picture>
+                </a>
               <button class="main-nav__toggle main-nav__toggle--closed"><span class="visually-hidden">Открыть меню</span><img class="page-header__logo-image" src="img/open_menu_button.svg" alt="Логотип" width="50" height="24"></button>
             </div>
             <div class="main-nav__wrapper">

@@ -51,13 +51,25 @@
   background-repeat: no-repeat;
   background-position: 50% 110%;
   margin-top: -16px;
+  background-size: 157px 320px, contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/phone_smile@2x.png");
+    background-size: 157px 320px, contain;
+  }
 
   @media (min-width: @tablet-width) {
+    background-image: url("../img/phone_smile_tablet.png");
     min-height: 482px;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     background-position: 20px 40px;
-    background-size: 40%;
+    background-size: 268px 547px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/phone_smile_tablet@2x.png");
+      background-size: 268px 547px, contain;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -89,28 +101,43 @@
     &:nth-child(1) {
       grid-column-start: 1;
       grid-column-end: 2;
-      background-image: url("../img/grey_phone.png");
+      background-image: url("../img/phone_grey_desktop.png");
       background-position: 50% 40%;
       background-repeat: no-repeat;
-      background-size: 50%;
+      background-size: 186px 382px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/phone_grey_desktop@2x.png");
+        background-size: 186px 382px;
+      }
     }
 
     &:nth-child(2) {
       grid-column-start: 2;
       grid-column-end: 3;
-      background-image: url("../img/phone_not_smile.png");
+      background-image: url("../img/phone_not_smile_desktop.png");
       background-position: 50% 40%;
       background-repeat: no-repeat;
       background-size: 50%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/phone_not_smile_desktop@2x.png");
+        background-size: 186px 382px;
+      }
     }
 
     &:nth-child(3) {
       grid-column-start: 3;
       grid-column-end: 4;
-      background-image: url("../img/phone_smile.png");
+      background-image: url("../img/phone_smile_desktop.png");
       background-position: 50% 40%;
       background-repeat: no-repeat;
       background-size: 50%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/phone_smile_desktop@2x.png");
+        background-size: 186px 382px;
+      }
     }
   }
 }
