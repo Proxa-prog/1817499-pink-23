@@ -1,3 +1,22 @@
+.user-comment {
+  @media (min-width: @tablet-width) {
+    order: 4;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+
+    .content-wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
 .user-comment__text {
   padding: 22px 25px 22px 20px;
   font-size: 18px;
@@ -7,4 +26,31 @@
   border-radius: 1px;
   margin-bottom: 52px;
   resize: none;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    width: 501px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 816px;
+  }
+}
+
+.user-comment__sent-wrapper {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+
+    .page-main__required {
+      padding-top: 15px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }

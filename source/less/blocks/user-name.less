@@ -1,26 +1,74 @@
 .user-name {
   min-height: 539px;
 
+  @media (min-width: @tablet-width) {
+    order: 0;
+    width: 100%;
+    min-height: 265px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 45%;
+    padding-top: 59px;
+    box-sizing: border-box;
+
+    .content-wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+    }
+  }
+
   p {
     width: 280px;
     margin: 54px auto 55px auto;
     line-height: 30px;
+
+    @media (min-width: @tablet-width) {
+      width: 430px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 620px;
+    }
   }
 }
 
 .user-name__form-list {
   .ul_style();
 
+  .user-name__input {
+    .input_style();
+    flex-grow: 1;
+    margin-left: 0;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 64px;
+    }
+  }
+
   .user-name__form-item {
     display: flex;
     flex-wrap: wrap;
   }
 
+
   .user-name__label {
     .label_style();
-  }
 
-  .user-name__input {
-    .input_style();
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 37px;
+      text-align: left;
+      padding-top: 15px;
+    }
   }
 }

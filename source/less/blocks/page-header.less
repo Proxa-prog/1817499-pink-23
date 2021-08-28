@@ -1,6 +1,6 @@
 .page-header {
   background-image: url("../img/phone_in_arm.png"), url("../img/back-mobile.jpg");
-  background-color: #092a43;
+  background-color: @color-background-black;
   background-repeat: no-repeat, no-repeat;
   background-size: auto, contain;
   background-position: 50% 42%, center top;
@@ -17,6 +17,21 @@
 
   @media (min-width: @desktop-width) {
     min-height: 853px;
+  }
+}
+
+.page-header__users-foto-header {
+  width: 172px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 357px;
+    font-size: 50px;
+    line-height: 68px;
   }
 }
 

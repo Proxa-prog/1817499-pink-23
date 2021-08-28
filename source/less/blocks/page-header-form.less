@@ -1,6 +1,6 @@
 .page-header-form {
   background-image: url("../img/back-mobile.jpg");
-  background-color: #092a43;
+  background-color: @color-background-black;
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
@@ -14,4 +14,16 @@
   line-height: 33px;
   width: 228px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 495px;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 747px;
+    font-size: 50px;
+    line-height: 68px;
+  }
 }

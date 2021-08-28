@@ -1,6 +1,10 @@
 .page-main__catalog-form {
   min-height: 880px;
   margin-top: 49px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 670px;
+  }
 }
 
 .page-main__catalog-button {
@@ -13,24 +17,50 @@
   font-size: 18px;
   line-height: 18px;
   color: @color-pink;
+
+  @media (min-width: @desktop-width) {
+    width: 183px;
+  }
 }
 
 .page-main__catalog-button:first-of-type {
   margin-bottom: 12px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+    margin-right: 40px;
+  }
 }
 
 .page-main__catalog-button:last-of-type {
   margin-bottom: 41px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .page-main__user-achievements {
-  height: 604px;
+  min-height: 604px;
   background-color: @color-grey;
   padding-top: 42px;
   box-sizing: border-box;
 
   fieldset {
     border: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: @color-white;
+
+    fieldset {
+      border: 2px solid @color-border-grey;
+      border-radius: 1px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 228px;
   }
 }
 
@@ -45,6 +75,10 @@
 .page-main__article {
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 422px;
+  }
 }
 
 .page-main__user-comment {
@@ -54,6 +88,22 @@
 
   fieldset {
     border: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    fieldset {
+      border: 2px solid @color-border-grey;
+      border-radius: 1px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    fieldset {
+      width: 100%;
+    }
   }
 
   .page-main__heading {
@@ -72,10 +122,15 @@
 .page-main__required {
   line-height: 30px;
   text-transform: uppercase;
-  margin-bottom: 66px;
 
   span {
     color: @color-pink;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 183px;
+    margin: 0;
+    margin-left: 0;
   }
 }
 
@@ -84,5 +139,35 @@
 
   fieldset {
     border: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    fieldset {
+      border: 2px solid @color-border-grey;
+      border-radius: 1px;
+    }
+  }
+}
+
+.page-main__form {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 130px;
+    padding-left: 130px;
+    box-sizing: border-box;
+  }
+}
+
+
+.page-main__form-fill-the-form {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }

@@ -1,12 +1,40 @@
+.user-achievements {
+  @media (min-width: @tablet-width) {
+    order: 2;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+
+    .content-wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
 .user-achievements__list {
   .ul_style();
   font-size: 18px;
   line-height: 30px;
   text-align: left;
 
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: space-between;
+  }
 
   .user-achievements__item {
     margin-bottom: 49px;
+
+    @media (min-width: @desktop-width) {
+      width: 271px;
+    }
   }
 }
 
