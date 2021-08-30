@@ -2,9 +2,33 @@
   background-image: url("../img/back-mobile.jpg");
   background-color: @color-background-black;
   background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
-  min-height: 462px;
+  background-size: cover;
+  background-position: top;
+  min-height: 237px;
   color: @color-white;
   margin-bottom: 54px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+    background-size: cover;
+    background-position: top;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 440px;
+    background-image: url("../img/back_tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back_tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 635px;
+    background-image: url("../img/back_desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back_desktop@2x.jpg");
+    }
+  }
 }
