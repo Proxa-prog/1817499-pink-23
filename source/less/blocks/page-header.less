@@ -101,6 +101,12 @@
   z-index: 2;
   width: 74px;
   height: 23px;
+
+  @media (min-width: @desktop-width) {
+    &:hover .page-header__logo-desktop { // Не выходит изменять, хотя всё как в презентации
+      fill: @color-pink;
+    }
+  }
 }
 
 .page-header__logo-phone {
@@ -173,6 +179,15 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+
+  &:hover {
+    color: @color-pink;
+    background-color: @color-white;
+  }
+
+  &:focus {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 .page-header__download-list {

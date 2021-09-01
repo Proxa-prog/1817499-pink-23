@@ -60,6 +60,17 @@
     font-size: 18px;
     text-transform: uppercase;
     color: @color-white;
+
+    @media (min-width: @desktop-width) {
+      &:hover {
+        color: @color-pink;
+      }
+
+      &:focus {
+        color: @color-white;
+        opacity: 0.3;
+      }
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -80,6 +91,10 @@
       font-weight: 400;
     }
   }
+}
+
+.main-nav__list-item-current {
+  border-bottom: 2px solid @color-white;
 }
 
 .main-nav__toggle--closed {
@@ -104,6 +119,7 @@
   border: none;
   z-index: 2;
 
+
   &::before,
   &::after {
     position: absolute;
@@ -111,6 +127,10 @@
     width: 27px;
     height: 2px;
     background-color: @color-white;
+
+    &:hover {
+      background-color: @color-pink; // не понимаю почему не изменяется.
+    }
   }
 
   &::before {

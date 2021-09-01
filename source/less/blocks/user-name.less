@@ -43,6 +43,15 @@
     flex-grow: 1;
     margin-left: 0;
 
+    &:hover {
+      border: 2px solid @color-text-black;
+      border-radius: 1px;
+    }
+
+    &:active {
+      border: 2px solid @color-pink; //остаётся чёрная обводка
+    }
+
     @media (min-width: @tablet-width) {
       margin-left: 20px;
     }

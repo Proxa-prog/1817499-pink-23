@@ -57,6 +57,18 @@
   align-items: center;
   justify-content: center;
   margin: 11px 7px 10px 44px;
+
+  &:hover {
+    border: 3px solid @color-text-black;
+  }
+
+  &:active {
+    border: 3px solid rgba(40, 54, 69, 0.1);
+
+    & path {
+      fill-opacity: 0.3;
+    }
+  }
 }
 
 .page-footer__lists-item:nth-child(2) {

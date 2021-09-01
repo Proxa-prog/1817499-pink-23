@@ -23,6 +23,35 @@
   }
 }
 
+.page-main__catalog-button-repost {
+  &:hover {
+    background-color: @color-pink;
+    color: @color-white;
+  }
+
+  &:active {
+    color: rgba(225, 225, 225, 0.3);
+  }
+}
+
+.page-main__catalog-button-cansel {
+  opacity: 0.1;
+  border: 3px solid @color-text-black;
+  color: @color-text-black;
+
+  &:hover {
+    opacity: 0.3;
+    border: 3px solid @color-text-black;
+    color: rgba(40, 54, 69, 0.3);
+  }
+
+  &:active {
+    background-color: @color-text-black;
+    color: rgba(225, 225, 225, 0.3);
+  }
+}
+
+
 .page-main__catalog-button:first-of-type {
   margin-bottom: 12px;
 

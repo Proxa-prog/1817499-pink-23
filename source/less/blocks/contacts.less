@@ -42,6 +42,19 @@
     font-size: 24px;
     line-height: 33px;
     color: @color-pink;
+    cursor: default;
+  }
+
+  .contacts__item-mail {
+    cursor: pointer;
+
+    &:hover {
+      color: @color-text-black;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: @tablet-width) {
