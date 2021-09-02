@@ -44,12 +44,14 @@
     margin-left: 0;
 
     &:hover {
+      outline: none;
       border: 2px solid @color-text-black;
       border-radius: 1px;
     }
 
-    &:active {
-      border: 2px solid @color-pink; //остаётся чёрная обводка
+    &:focus {
+      outline: none;
+      border: 2px solid @color-pink;
     }
 
     @media (min-width: @tablet-width) {

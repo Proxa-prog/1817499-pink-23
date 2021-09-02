@@ -64,6 +64,17 @@
   .input_style();
   width: 256px;
 
+  &:hover {
+    outline: none;
+    border: 2px solid @color-text-black;
+    border-radius: 1px;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid @color-pink;
+  }
+
   @media (min-width: @tablet-width) {
     order: 0;
     width: 496px;

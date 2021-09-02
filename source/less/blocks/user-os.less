@@ -58,10 +58,18 @@
   &:last-child {
     margin-bottom: 44px;
   }
+}
 
-  .user-os__label {
-    margin-left: 80px;
-    position: relative;
+.user-os__label {
+  margin-left: 80px;
+  position: relative;
+
+  &:hover::before {
+    border-color: @color-text-black;
+  }
+
+  &:active::before {
+    border-color: @color-pink;
   }
 }
 

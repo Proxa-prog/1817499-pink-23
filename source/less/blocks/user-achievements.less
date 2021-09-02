@@ -42,6 +42,16 @@
   margin-left: 59px;
   position: relative;
   display: block;
+
+  &:hover::before {
+    border: 2px solid @color-text-black;
+    border-radius: 1px;
+  }
+
+  &:active::before {
+    border: 2px solid @color-pink;
+    border-radius: 1px;
+  }
 }
 
 .user-achievements__input {
@@ -55,11 +65,6 @@
     border-radius: 1px;
     left: -55px;
     top: -5px;
-
-    &:hover + label::before {
-      border: 2px solid @color-text-black; //тоже не работает
-      border-radius: 1px;
-    }
   }
 
   &:checked + label::after {

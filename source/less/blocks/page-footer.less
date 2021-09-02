@@ -21,10 +21,23 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 30px;
+    width: 33%;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 240px;
+    width: 33%;
+  }
+}
+
+.page-footer__logo-pink {
+  fill: @color-text-black;
+
+  &:hover {
+    fill: @color-pink;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -42,8 +55,12 @@
 .page-footer__social {
   min-height: 100px;
 
+  @media (min-width: @tablet-width) {
+    width: 33%;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-right: 70px;
+    width: 33%;
   }
 }
 
@@ -56,7 +73,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 11px 7px 10px 44px;
 
   &:hover {
     border: 3px solid @color-text-black;
@@ -72,24 +88,47 @@
 }
 
 .page-footer__lists-item:nth-child(2) {
-  margin: 11px 7px 53px 7px;
-}
-
-.page-footer__lists-item:nth-child(3) {
-  margin: 11px 14px 53px 7px;
+  margin: 0 14px 0 14px;
 }
 
 .page-footer__htmlacademy-logo {
   display: flex;
 
   p {
-    margin-left: 75px;
-    margin-right: 15px;
+    width: 50%;
+    margin-left: -3px;
     margin-top: 2px;
   }
 
+  a {
+    width: 50%;
+  }
+
   @media (min-width: @tablet-width) {
+    width: 33%;
     padding-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33%;
+  }
+}
+
+.page-footer__htmlacademy-logo-sprite {
+  fill: @color-pink;
+}
+
+.page-footer__htmlacademy-logo-link {
+  &:hover {
+    .page-footer__htmlacademy-logo-sprite {
+      fill: @color-text-black;
+    }
+  }
+
+  &:active {
+    .page-footer__htmlacademy-logo-sprite {
+      fill-opacity: 0.3;
+    }
   }
 }
 
