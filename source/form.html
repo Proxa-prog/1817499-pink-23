@@ -14,7 +14,7 @@
 
       <header class="page-header page-header-form page-header--nojs">
 
-        <div class="page-header__wrapper">
+        <div class="page-header__wrapper page-header-form-wrapper">
           <nav class="main-nav main-nav--nojs">
             <div class="content-wrapper">
               <a class="page-header__logo" href="#" >
@@ -98,13 +98,13 @@
 
             <div class="page-main__user-achievements user-achievements">
               <div class="content-wrapper">
-                <fieldset>
+                <fieldset class="user-achievements__fieldset">
                   <legend class="page-main__heading">Ваши безбашенные достижения в путешествии</legend>
 
                   <ul class="user-achievements__list">
                     <li class="user-achievements__item">
                       <input class="user-achievements__input visually-hidden" type="checkbox" checked id="shark">
-                      <label class="user-achievements__label" for="shark">Сделать селфи с акулой</label>
+                      <label class="user-achievements__label" for="shark">Сделал селфи с акулой</label>
                     </li>
                     <li class="user-achievements__item">
                       <input class="user-achievements__input visually-hidden" type="checkbox" checked id="beach">
@@ -152,7 +152,7 @@
             <div class="page-main__user-os user-os">
               <div class="content-wrapper">
                 <fieldset>
-                  <legend class="user-os__heading">С каким приложение путешествовали?</legend>
+                  <legend class="user-os__heading">С каким приложением путешествовали?</legend>
 
                   <ul class="user-os__list">
                     <li class="user-os__item">
@@ -175,13 +175,12 @@
             <div class="page-main__user-comment user-comment">
               <div class="content-wrapper">
                 <fieldset>
-                  <legend class="page-main__heading">Опишите свои эмоции</legend>
-
-                  <textarea class="user-comment__text" aria-label="Опишите свои эмоции" name="user-comment" cols="24" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                  <legend class="page-main__heading-comment">Опишите свои эмоции</legend>
+                  <textarea class="user-comment__text" aria-label="Опишите свои эмоции" name="user-comment" cols="25" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
                 </fieldset>
                 <div class="user-comment__sent-wrapper">
                   <button class="page-main__submit button" type="submit">Отправить форму</button>
-                  <p class="page-main__required"><span>*</span> &mdash; Обязательные поля</p>
+                  <p class="page-main__required"><span>*</span> &mdash; Обязательные <span class="page-main__required-desktop">для заполнения</span> поля</p>
               </div>
               </div>
             </div>
@@ -191,7 +190,7 @@
 
       <footer class="page-footer">
         <div class="page-footer__wrapper content-wrapper">
-          <div class="page-footer__logo">
+          <div class="page-footer__logo page-footer__logo-form">
             <svg class="page-footer__logo-pink" width="145" height="40" viewBox="0 0 145 40" fill="none">
               <use xlink:href="img/sprite.svg#footer-logo"></use>
             </svg>
@@ -215,7 +214,7 @@
               </li>
             </ul>
           </div>
-          <div class="page-footer__htmlacademy-logo">
+          <div class="page-footer__htmlacademy-logo page-footer__htmlacademy-logo-form">
             <p>Разработано</p>
             <a class="page-footer__htmlacademy-logo-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Html academy">
               <svg class="page-footer__htmlacademy-logo-sprite" width="27" height="34" viewBox="0 0 27 34" fill="none">

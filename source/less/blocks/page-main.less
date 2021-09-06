@@ -4,6 +4,11 @@
 
   @media (min-width: @tablet-width) {
     min-height: 670px;
+    margin-top: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 12px;
   }
 }
 
@@ -18,8 +23,14 @@
   line-height: 18px;
   color: @color-pink;
 
+  @media (min-width: @tablet-width) {
+    width: 261px;
+    margin-left: 25px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 183px;
+    margin-left: 0;
   }
 }
 
@@ -55,9 +66,13 @@
 .page-main__catalog-button:first-of-type {
   margin-bottom: 12px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-bottom: 20px;
-    margin-right: 40px;
+    margin-bottom: 3px;
+    margin-right: 43px;
   }
 }
 
@@ -66,6 +81,11 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 5px;
+    margin-right: 13px;
   }
 }
 
@@ -81,6 +101,7 @@
 
   @media (min-width: @tablet-width) {
     background-color: @color-white;
+    padding-top: 56px;
 
     fieldset {
       border: 2px solid @color-border-grey;
@@ -98,59 +119,95 @@
   color: @color-pink;
   text-transform: uppercase;
   line-height: 18px;
-  margin-bottom: 55px;
+  margin-bottom: 43px;
+  font-weight: 300;
+
+  @media (min-width: @tablet-width) {
+    width: 437px;
+    margin-bottom: 49px;
+  }
+}
+
+.page-main__heading-comment {
+  color: @color-pink;
+  text-transform: uppercase;
+  line-height: 18px;
+  font-weight: 300;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 263px;
+  }
 }
 
 .page-main__article {
   width: 280px;
-  margin: 0 auto;
+  margin: -10px auto 0;
+  font-weight: 300;
+  line-height: 30px;
 
   @media (min-width: @tablet-width) {
-    width: 422px;
+    width: 450px;
+    font-size: 18px;
+    line-height: 30px;
+
+    br {
+      display: none;
+    }
+
+    .page-main__article--visible {
+      display: inline;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 571px;
   }
 }
 
 .page-main__user-comment {
   min-height: 464px;
-  padding-top: 42px;
+  padding-top: 37px;
   box-sizing: border-box;
 
   fieldset {
     border: none;
+    padding: 0;
+    margin: 0;
   }
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 59px;
 
     fieldset {
       border: 2px solid @color-border-grey;
       border-radius: 1px;
+      min-height: 275px;
+      padding-top: 21px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 56px;
+
     fieldset {
       width: 100%;
+      min-height: 163px;
     }
-  }
-
-  .page-main__heading {
-    line-height: 18px;
-    color: @color-pink;
-    width: 184px;
-    text-transform: uppercase;
-    margin-bottom: 22px;
   }
 }
 
 .page-main__submit {
-  margin-bottom: 42px;
+  margin-bottom: 22px;
 }
 
 .page-main__required {
   line-height: 30px;
   text-transform: uppercase;
+  margin-left: 50px;
+  font-weight: 300;
 
   span {
     color: @color-pink;
@@ -161,6 +218,14 @@
     margin: 0;
     margin-left: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 315px;
+
+    .page-main__required-desktop {
+      color: @color-text-black;
+    }
+  }
 }
 
 .page-main__user-contacts {
@@ -168,12 +233,22 @@
 
   fieldset {
     border: none;
+    padding: 0;
   }
 
   @media (min-width: @tablet-width) {
     fieldset {
       border: 2px solid @color-border-grey;
       border-radius: 1px;
+      min-height: 319px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 180px;
+
+    fieldset {
+      min-height: 175px;
     }
   }
 }
@@ -183,6 +258,10 @@
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
+
+    & .content-wrapper {
+      padding: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -197,6 +276,32 @@
   display: none;
 
   @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
+.page-main__form-description {
+  padding-top: 30px;
+  font-weight: 300;
+  line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    width: 490px;
+    margin: 0 auto;
+    padding-top: 91px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 801px;
+    margin-left: 69px;
+  }
+}
+
+.page-main__required-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
     display: inline;
   }
 }

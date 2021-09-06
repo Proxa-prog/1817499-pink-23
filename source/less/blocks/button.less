@@ -1,5 +1,5 @@
 .button {
-  width: 276px;
+  width: 280px;
   height: 59px;
   background: @color-green;
   border: 2px solid @color-green;
@@ -22,5 +22,9 @@
   &:disabled {
     background: @color-border-grey;
     border: 2px solid @color-border-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
   }
 }

@@ -18,7 +18,7 @@
           <nav class="main-nav main-nav--nojs">
             <div class="content-wrapper">
               <a class="page-header__logo" href="#">
-                <svg class="page-header__logo-phone" width="74" height="23" viewBox="0 0 145 40" fill="none">
+                <svg class="page-header__logo-phone" width="80" height="23" viewBox="0 0 145 40" fill="none">
                   <use xlink:href="img/sprite.svg#mobile-logo"></use>
                 </svg>
                 <svg class="page-header__logo-tablet" width="145" height="40" viewBox="0 0 145 40" fill="none">
@@ -65,21 +65,23 @@
           <p class="page-header__tagline">Взгляните на жизнь иначе!</p>
         </div>
 
-        <div class="page-header__download">
+        <div class="page-header__download-wrapper">
           <div class="content-wrapper">
-            <a class="page-header__button-download" href="https://www.apple.com/ru/shop">Скачать приложение</a>
-            <ul class="page-header__download-list">
-              <li class="page-header__apple">
-                <a href="https://www.apple.com/ru/shop"><img src="img/apple_logo.svg" alt="Скачать на Apple" width="47" height="56"></a>
-              </li>
-              <li class="page-header__android">
-                <a href="https://play.google.com/store?hl=ru&gl=US"><img src="img/android_logo.svg" alt="Скачать на Android" width="43" height="47"></a>
-              </li>
-              <li class="page-header__microsoft">
-                <a href="https://www.microsoft.com/ru-ru/store/apps/windows"><img src="img/microsoft_logo.svg" alt="Скачать на Microsoft" width="44" height="41"></a>
-              </li>
-            </ul>
-            <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            <div class="page-header__download">
+              <a class="page-header__button-download" href="https://www.apple.com/ru/shop">Скачать приложение</a>
+              <ul class="page-header__download-list">
+                <li class="page-header__apple">
+                  <a href="https://www.apple.com/ru/shop"><img src="img/apple_logo.svg" alt="Скачать на Apple" width="47" height="56"></a>
+                </li>
+                <li class="page-header__android">
+                  <a href="https://play.google.com/store?hl=ru&gl=US"><img src="img/android_logo.svg" alt="Скачать на Android" width="43" height="47"></a>
+                </li>
+                <li class="page-header__microsoft">
+                  <a href="https://www.microsoft.com/ru-ru/store/apps/windows"><img src="img/microsoft_logo.svg" alt="Скачать на Microsoft" width="44" height="41"></a>
+                </li>
+              </ul>
+              <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            </div>
           </div>
         </div>
       </header>
@@ -100,26 +102,29 @@
                   <div class="offer__container">
                     <ul class="offer__list">
                         <li class="offer__item">
+                          <div class="offer__item-wrapper"></div>
                           <div class="offer-reasons">
                             <h3 class="offer__header">Поднимает настроение</h3>
                             <p class="offer-reasons__discription">
-                              Приложение позволит вам победить осеннюю хандру и депрессию буквально в нельколько кликов!
+                              Приложение позволит вам победить осеннюю хандру и депрессию<br> буквально в нельколько кликов!
                             </p>
                           </div>
                         </li>
                         <li class="offer__item">
+                          <div class="offer__item-wrapper"></div>
                           <div class="offer-reasons">
-                            <h3 class="offer__header">Меняем мир вокруг</h3>
+                            <h3 class="offer__header">Меняет мир вокруг</h3>
                             <p class="offer-reasons__discription">
-                              Сделайте снимок и украсьте его смайликом или текстовой подписью. чтобы усилить эффект
+                              Сделайте снимок и <br class="offer-reasons__discription-desktop">украсьте его смайликом или текстовой подписью, чтобы<br class="offer-reasons__discription-tablet"> усилить эффект
                             </p>
                           </div>
                         </li>
                         <li class="offer__item">
+                          <div class="offer__item-wrapper"></div>
                           <div class="offer-reasons">
                             <h3 class="offer__header">Заводит новых друзей</h3>
                             <p class="offer-reasons__discription">
-                              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+                              Ставьте лайки, комментируйте,<br> делитесь фотографиями с друзьями и заводите новых
                             </p>
                           </div>
                         </li>
@@ -133,8 +138,8 @@
                   <div class="effect__container">
                     <h2 class="effect__header">Эффект<br> на 24 часа!</h2>
                     <p class="effect__discription">
-                      Британские учёные провели исследования и доказали, что положительный
-                      эффект от использования приложения длится целые сутки!
+                      Британские учёные провели исследования и доказали,<br class="effect__discription-desktop"> что положительный
+                      эффект<br> от использования приложения длится целые сутки!
                     </p>
                     <a class="effect__more-details" href="#" >Узнать больше об исследовании</a>
                   </div>
@@ -147,15 +152,17 @@
             <div class="content-wrapper">
               <div class="reviews__wrapper slider">
                 <h2 class="visually-hidden">Отзывы</h2>
+                <button class="reviews__button-left"></button>
                 <ul class="reviews__list slider__list">
                   <li class="reviews__item slider__item">
                     <h3 class="reviews__item-title">Николай Петров</h3>
                     <p class="reviews__title-caption">25 лет, водитель травмвая</p>
                     <p class="reviews__item-discription">
-                      &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
+                      &#171;Это приложение перевернуло мой мир<br> и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой<br> в комментариях к выложенной фотографии!&#187;
                     </p>
                   </li>
                 </ul>
+                <button class="reviews__button-right"></button>
                 <p class="reviews__toggles slider__toggles">
                   <button class="reviews__toggle reviews__toggle--current"></button>
                   <button class="reviews__toggle"></button>
@@ -257,7 +264,7 @@
           <div class="page-footer__htmlacademy-logo">
             <p>Разработано</p>
             <a class="page-footer__htmlacademy-logo-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Html academy">
-              <svg class="page-footer__htmlacademy-logo-sprite" width="145" height="40" viewBox="0 0 27 34" fill="none">
+              <svg class="page-footer__htmlacademy-logo-sprite" width="145" height="30" viewBox="0 0 27 34" fill="none">
                 <use xlink:href="img/sprite.svg#html-logo"></use>
               </svg>
             </a>

@@ -3,12 +3,36 @@
   background-image: url("../img/triangle_white.svg");
   background-position: bottom;
   background-repeat: no-repeat;
+  padding-top: 18px;
 
 
   h3 {
     font-weight: 300;
     font-size: 24px;
     line-height: 120%;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+
+    h3 {
+      font-size: 40px;
+      line-height: 54px;
+      margin-bottom: 14px;
+      margin-top: 34px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 25px;
+
+    h3 {
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 68px;
+      margin-bottom: 46px;
+    }
   }
 }
 
@@ -34,6 +58,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
+    margin-bottom: 0;
   }
 
   a {
@@ -58,6 +83,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
+
     &:nth-child(1) {
       width: 1fr;
     }
@@ -74,14 +101,29 @@
   @media (min-width: @desktop-width) {
     &:nth-child(1) {
       width: 1fr;
+      margin-top: 0;
+      margin-left: 30px;
     }
 
     &:nth-child(2) {
       width: 1fr;
+      order: 3;
+      margin-top: 0;
+      margin-left: 51px;
     }
 
     &:nth-child(3) {
       width: 1fr;
+      margin-left: 49px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      margin-top: -6px;
+    }
+
+    a {
+      font-weight: 400;
     }
   }
 }

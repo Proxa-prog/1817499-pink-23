@@ -9,17 +9,25 @@
 
   @media (min-width: @desktop-width) {
     background-color: @color-grey;
+    min-height: 453px;
   }
 }
 
 .effect__container {
   background-image: url("../img/timer.svg");
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: left 116%;
   text-align: left;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   min-height: 330px;
+
+  @media (min-width: @desktop-width) {
+    background-size: 298px 345px;
+    background-position: left 0 top 44px;
+    grid-template-columns: repeat(3, 33%);
+    min-height: 367px;
+  }
 }
 
 .effect__header {
@@ -29,16 +37,72 @@
   line-height: 36px;
   grid-column-start: 2;
   grid-column-end: 3;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-left: 58px;
+    padding-top: 136px;
+    margin-bottom: -7px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .effect__discription {
   width: 297px;
   grid-column-start: 2;
   grid-column-end: 3;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    br {
+      display: inline;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 534px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-left: 58px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+
+    br {
+      display: none;
+    }
+
+    .effect__discription-desktop {
+      display: inline;
+    }
+  }
 }
 
 .effect__more-details {
   color: @color-pink;
   grid-column-start: 2;
   grid-column-end: 3;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-left: 58px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+  }
 }

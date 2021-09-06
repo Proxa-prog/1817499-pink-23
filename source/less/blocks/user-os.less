@@ -1,27 +1,31 @@
 .user-os {
-  min-height: 340px;
+  min-height: 334px;
   background-color: @color-grey;
-  padding-top: 42px;
+  padding-top: 33px;
   box-sizing: border-box;
 
   fieldset {
     border: none;
+    padding: 0;
   }
 
   @media (min-width: @tablet-width) {
     order: 0;
     width: 100%;
     background-color: @color-white;
-    margin-bottom: 65px;
+    margin-bottom: 31px;
+    padding-top: 6px;
 
     fieldset {
       border: 2px solid @color-border-grey;
       border-radius: 1px;
+      margin: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
-    width: 45%;
+    width: 46%;
+    padding-top: 72px;
 
     .content-wrapper {
       width: 100%;
@@ -31,7 +35,7 @@
     }
 
     fieldset {
-      width: 100%;
+      width: 433px;
       box-sizing: border-box;
     }
   }
@@ -42,7 +46,13 @@
   color: @color-pink;
   width: 178px;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin-bottom: 39px;
+  font-weight: 300;
+
+  @media (min-width: @tablet-width) {
+    width: 368px;
+    margin-bottom: 48px;
+  }
 }
 
 .user-os__list {
@@ -53,16 +63,23 @@
 }
 
 .user-os__item {
-  margin-bottom: 52px;
+  margin-bottom: 45px;
 
   &:last-child {
     margin-bottom: 44px;
   }
+
+  @media (min-width: @tablet-width) {
+    &:last-child {
+      margin-bottom: 58px;
+    }
+  }
 }
 
 .user-os__label {
-  margin-left: 80px;
+  margin-left: 67px;
   position: relative;
+  font-weight: 300;
 
   &:hover::before {
     border-color: @color-text-black;
@@ -70,6 +87,15 @@
 
   &:active::before {
     border-color: @color-pink;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 119px;
+    font-weight: 300;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 130px;
   }
 }
 
@@ -83,7 +109,11 @@
     border: 2px solid @color-border-grey;
     border-radius: 50%;
     top: -8px;
-    left: -65px;
+    left: -69px;
+
+    @media (min-width: @tablet-width) {
+      left: -60px;
+    }
   }
 
   &:checked + label::after {
@@ -94,6 +124,10 @@
     background: @color-pink;
     border-radius: 50%;
     top: 5px;
-    left: -52px;
+    left: -56px;
+
+    @media (min-width: @tablet-width) {
+      left: -48px;
+    }
   }
 }

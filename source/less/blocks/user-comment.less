@@ -18,32 +18,36 @@
 }
 
 .user-comment__text {
-  padding: 22px 25px 22px 20px;
+  padding: 13px 25px 5px 20px;
   font-size: 18px;
   line-height: 30px;
   color: @color-text-black;
   border: 2px solid @color-border-grey;
   border-radius: 1px;
-  margin-bottom: 52px;
   resize: none;
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
     width: 501px;
+    padding: 15px 25px 25px 20px;
+    height: 193px;
   }
 
   @media (min-width: @desktop-width) {
     width: 816px;
+    height: 125px;
+    padding: 10px 25px 25px 20px;
   }
 }
 
 .user-comment__sent-wrapper {
-  margin-top: 70px;
+  margin-top: 41px;
   display: flex;
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     justify-content: space-between;
+    margin-top: 68px;
 
     .page-main__required {
       padding-top: 15px;

@@ -3,6 +3,19 @@
   height: 2px;
   background-color: @color-text-black;
   position: relative;
+  top: 32px;
+  left: -10px;
+
+  @media (min-width: @tablet-width) {
+    width: 203px;
+    left: 22px;
+    top: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 287px;
+    left: 42px;
+  }
 }
 
 .range-controls__toggle {
@@ -17,6 +30,22 @@
   left: 80%;
 }
 
+.range-controls__toggle-fill {
+  @media (min-width: @tablet-width) {
+    left: 14%;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 12%;
+  }
+}
+
+.range-controls__toggle-contrast {
+  @media (min-width: @tablet-width) {
+    left: 47%;
+  }
+}
+
 .range-controls__toggle--active {
-  background-color: @color-pink;
+  background-color: @color-white;
 }
