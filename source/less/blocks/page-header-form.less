@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  min-height: 440px;
+  min-height: 238px;
   color: @color-white;
 
   @media (min-resolution: 2dppx) {
@@ -14,6 +14,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    min-height: 439px;
     background-image: url("../img/back_tablet.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -22,6 +23,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 394px;
     background-image: url("../img/back_desktop.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -30,11 +32,23 @@
   }
 }
 
+.page-header-form-wrapper {
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: -32px;
+  }
+}
+
 .page-header-form__competition {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 24px;
   line-height: 33px;
-  width: 228px;
+  width: 236px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {

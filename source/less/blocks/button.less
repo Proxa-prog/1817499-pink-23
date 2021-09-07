@@ -1,5 +1,5 @@
 .button {
-  width: 276px;
+  width: 280px;
   height: 59px;
   background: @color-green;
   border: 2px solid @color-green;
@@ -9,4 +9,22 @@
   font-weight: 700;
   color: @color-white;
   text-transform: uppercase;
+
+  &:hover {
+    background: @color-middle-green;
+    border: 2px solid @color-middle-green;
+  }
+
+  &:active {
+    color: rgba(225, 225, 225, 0.3);
+  }
+
+  &:disabled {
+    background: @color-border-grey;
+    border: 2px solid @color-border-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
 }

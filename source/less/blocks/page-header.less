@@ -2,27 +2,27 @@
   background-image: url("../img/phone_in_arm.png"), url("../img/back-mobile.jpg");
   background-color: @color-background-black;
   background-repeat: no-repeat, no-repeat;
-  background-size: 320px 286px, contain;
-  background-position: 50% 42%, center top;
+  background-size: 320px 286px, cover;
+  background-position: 50% 39%, center top;
   min-height: 733px;
   color: @color-white;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/phone_in_arm@2x.png"), url("../img/back-mobile@2x.jpg");
-    background-size: 320px 286px, contain;
+    background-size: 320px 286px, cover;
   }
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/phone_in_arm_tablet.png"), url("../img/back_tablet.jpg");
     min-height: 729px;
-    background-size: 100% 80%, contain;
+    background-size: 100% 75%, cover;
     background-position: 100% 100%, center;
     display: grid;
     grid-template-columns: 1fr, 1fr;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/phone_in_arm_tablet@2x.png"), url("../img/back_tablet@2x.jpg");
-      background-size: 100% 80%, contain;
+      background-size: 100% 75%, cover;
     }
   }
 
@@ -32,7 +32,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/phone_in_arm_desktop@2x.png"), url("../img/back_desktop@2x.jpg");
-      background-size: 100% 80%, contain;
+      background-size: 88% 76%, cover;
     }
   }
 }
@@ -44,11 +44,18 @@
   line-height: 33px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 28px;
 
   @media (min-width: @tablet-width) {
     width: 357px;
     font-size: 50px;
     line-height: 68px;
+    margin-top: 18px;
+    font-weight: 400;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -9px;
   }
 }
 
@@ -58,9 +65,14 @@
 
 .page-header__wrapper {
   background-color: rgba(0, 0, 0, 0.3);
+  height: 66px;
 
   @media (min-width: @tablet-width) {
     height: 110px;
+
+    & .content-wrapper {
+      min-height: 158px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -73,7 +85,7 @@
 .page-header__tagline {
   box-sizing: border-box;
   margin: auto;
-  padding-top: 20px;
+  padding-top: 26px;
   width: 280px;
   font-weight: 300;
   font-style: normal;
@@ -87,23 +99,54 @@
     margin-right: 48px;
     width: 206px;
     font-size: 40px;
+    padding-top: 12px;
+    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
+    width: 295px;
     margin-left: 0;
+    font-size: 50px;
+    line-height: 68px;
+    font-weight: 400;
+    padding-top: 0;
   }
 }
 
 .page-header__logo {
   position: absolute;
   top: 22px;
-  left: 20px;
+  left: 17px;
   z-index: 2;
   width: 74px;
   height: 23px;
+
+  @media (min-width: @tablet-width) {
+    top: 26px;
+    left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 130px;
+  }
+
+  &:hover .page-header__logo-phone,
+  &:hover .page-header__logo-tablet,
+  &:hover .page-header__logo-desktop {
+    fill: @color-pink;
+  }
+
+  &:active .page-header__logo-phone,
+  &:active .page-header__logo-tablet,
+  &:active .page-header__logo-desktop {
+    fill: @color-white;
+    fill-opacity: 0.3;
+  }
 }
 
 .page-header__logo-phone {
+  fill: @color-white;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -118,6 +161,7 @@
 
   @media (min-width: @tablet-width) {
     display: inline;
+    fill: @color-white;
   }
 
   @media (min-width: @desktop-width) {
@@ -134,14 +178,23 @@
 
   @media (min-width: @desktop-width) {
     display: inline;
+    fill: @color-white;
+  }
+}
+
+.page-header__download-wrapper {
+  background-color: @color-black;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
   }
 }
 
 .page-header__download {
   bottom: 10px;
   background-color: @color-black;
-  height: 271px;
-  padding-top: 49px;
+  height: 267px;
+  padding-top: 41px;
   box-sizing: border-box;
   margin-top: 319px;
 
@@ -153,11 +206,19 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 300px;
+    width: 310px;
     display: flex;
+    flex-wrap: wrap;
     background: none;
     grid-column: 1/2;
     margin: 0;
+    padding-top: 0;
+    margin-top: -52px;
+
+    p {
+      font-size: 18px;
+      width: 308px;
+    }
   }
 }
 
@@ -169,26 +230,56 @@
   border: 3px solid @color-white;
   box-sizing: border-box;
   border-radius: 39px;
-  padding: 13px 31px 13px 30px;
+  padding: 13px 35px 13px 35px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+
+  &:hover {
+    color: @color-pink;
+    background-color: @color-white;
+  }
+
+  &:focus {
+    color: rgba(210, 40, 86, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
 }
 
 .page-header__download-list {
   .ul_style();
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: -85px;
+  }
 }
 
 .page-header__apple {
-  margin: 50px 18px 10px 38px;
+  margin: 46px 1px 10px 39px;
+
+  @media (min-width: @tablet-width) {
+    margin: -8px 1px 8px 46px;
+  }
 }
 
 .page-header__android {
-  margin: 55px 18px 10px 17px;
+  margin: 52px 35px 10px 34px;
+
+  @media (min-width: @tablet-width) {
+    margin: -6px 35px 8px 34px;
+  }
 }
 
 .page-header__microsoft {
-  margin: 57px 38px 10px 17px;
+  margin: 57px 30px 10px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: -2px 30px 8px 0;
+  }
 }
