@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -115,7 +115,7 @@
                           <div class="offer-reasons">
                             <h3 class="offer__header">Меняет мир вокруг</h3>
                             <p class="offer-reasons__discription">
-                              Сделайте снимок и <br class="offer-reasons__discription-desktop">украсьте его смайликом или текстовой подписью, чтобы<br class="offer-reasons__discription-tablet"> усилить эффект
+                              Сделайте снимок и <br class="offer-reasons__discription-desktop"> украсьте его смайликом или текстовой подписью, чтобы<br class="offer-reasons__discription-tablet"> усилить эффект
                             </p>
                           </div>
                         </li>
@@ -179,7 +179,7 @@
                   <tr class="price-list__header table-header">
                     <th class="table-header__item"></th>
                     <th class="price-list__base-header table-header__item">База<br><span>1,99 USD</span></th>
-                    <th class="table-header__item">Стандарт<br><span>3,99 USD</span></th>
+                    <th class="table-header__item table-header__item-standart">Стандарт<br><span>3,99 USD</span></th>
                     <th class="table-header__item">Анлим<br><span>9,99 USD</span></th>
                   </tr>
                   <tr class="price-list__first-line">
@@ -272,29 +272,7 @@
         </div>
       </footer>
 
-      <script>
-        let mainNavToggle = document.querySelector(".main-nav__toggle--closed");
-        let navList = document.querySelector(".main-nav__list");
-        let mainNav = document.querySelector(".main-nav");
-        let pageHeader = document.querySelector(".page-header");
-
-        pageHeader.classList.remove("page-header--nojs");
-        mainNav.classList.remove("main-nav--nojs");
-        navList.classList.add("main-nav__list--closed");
-
-        mainNav.addEventListener("click", function() {
-          if(mainNavToggle.classList.contains("main-nav__toggle--closed")) {
-            mainNavToggle.classList.remove("main-nav__toggle--closed");
-            mainNavToggle.classList.add("main-nav__toggle--open");
-            navList.classList.remove("main-nav__list--closed");
-            navList.classList.add("main-nav__list--open");
-          }else{
-            mainNavToggle.classList.remove("main-nav__toggle--open");
-            mainNavToggle.classList.add("main-nav__toggle--closed");
-            navList.classList.remove("main-nav__list--open");
-            navList.classList.add("main-nav__list--closed");
-          }
-        })
+      <script src="js/script.min.js">
       </script>
 
   </body>

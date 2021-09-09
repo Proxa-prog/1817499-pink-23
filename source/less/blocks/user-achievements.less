@@ -24,8 +24,8 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 0;
+    padding-right: 0;
     justify-content: space-between;
   }
 
@@ -33,8 +33,10 @@
     margin-bottom: 52px;
 
     @media (min-width: @desktop-width) {
-      width: 280px;
+      width: 312px;
       margin-bottom: 52px;
+      box-sizing: border-box;
+      padding-left: 108px;
 
       &:nth-of-type(2) {
         order: 4;
@@ -50,10 +52,12 @@
 
       &:nth-of-type(5) {
         order: 3;
+        padding-left: 98px;
       }
 
       &:nth-of-type(6) {
         order: 6;
+        padding-left: 98px;
       }
     }
   }
@@ -82,7 +86,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 72px;
+    margin-left: 0;
   }
 }
 
@@ -99,7 +103,7 @@
     top: -5px;
 
     @media (min-width: @desktop-width) {
-      left: -25px;
+      left: -49px;
     }
   }
 
@@ -111,7 +115,7 @@
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    left: -45px;
+    left: -42px;
     top: 5px;
     bottom: 15px;
   }
