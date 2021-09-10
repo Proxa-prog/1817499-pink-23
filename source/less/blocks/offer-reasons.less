@@ -1,0 +1,45 @@
+.offer-reasons {
+  font-weight: 300;
+
+  .offer-reasons__discription-tablet {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @color-grey;
+    z-index: 3;
+    padding: 50px 31px 0 30px;
+
+    .offer-reasons__discription-tablet {
+      display: none;
+    }
+  }
+}
+
+.offer-reasons__discription {
+  .offer-reasons__discription-desktop {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-weight: 300;
+
+    .offer-reasons__discription-desktop {
+      display: none;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 23px;
+
+    .offer-reasons__discription-desktop {
+      display: inline;
+    }
+  }
+}

@@ -1,14 +1,19 @@
 .price-list {
+  background: linear-gradient(170deg, @color-white 10%, @color-grey 90%);
   width: 100%;
   background-image: url("../img/grey_background_price.svg");
   background-size: cover;
-  background-color: @color-grey;
   margin-top: -14px;
   padding-top: 136px;
   padding-bottom: 31px;
 
   @media (min-width: @tablet-width) {
+    background: linear-gradient(176deg, @color-white 12%, @color-grey 12%);
     padding-top: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(175deg, @color-white 21%, @color-grey 21%);
   }
 }
 
