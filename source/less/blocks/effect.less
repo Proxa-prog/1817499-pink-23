@@ -22,6 +22,11 @@
   grid-template-columns: repeat(2, 50%);
   min-height: 330px;
 
+  @media (min-width: @tablet-width) {
+    background-position: left 87%;
+    min-height: 341px;
+  }
+
   @media (min-width: @desktop-width) {
     background-size: 298px 345px;
     background-position: left 0 top 44px;
@@ -40,6 +45,8 @@
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
+    padding-top: 99px;
+    margin-bottom: -11px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,6 +77,10 @@
 
     br {
       display: inline;
+    }
+
+    .effect__discription-desktop {
+      display: none;
     }
   }
 

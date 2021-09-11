@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Каталог</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
@@ -333,29 +333,7 @@
         </div>
       </footer>
 
-      <script>
-        let mainNavToggle = document.querySelector(".main-nav__toggle--closed");
-        let navList = document.querySelector(".main-nav__list");
-        let mainNav = document.querySelector(".main-nav");
-        let pageHeader = document.querySelector(".page-header");
-
-        pageHeader.classList.remove("page-header--nojs");
-        mainNav.classList.remove("main-nav--nojs");
-        navList.classList.add("main-nav__list--closed"); // Как сделать, чтобы на desktop меню было открыто?
-
-        mainNav.addEventListener("click", function() {
-          if(mainNavToggle.classList.contains("main-nav__toggle--closed")) {
-            mainNavToggle.classList.remove("main-nav__toggle--closed");
-            mainNavToggle.classList.add("main-nav__toggle--open");
-            navList.classList.remove("main-nav__list--closed");
-            navList.classList.add("main-nav__list--open");
-          }else{
-            mainNavToggle.classList.remove("main-nav__toggle--open");
-            mainNavToggle.classList.add("main-nav__toggle--closed");
-            navList.classList.remove("main-nav__list--open");
-            navList.classList.add("main-nav__list--closed");
-          }
-        })
+      <script src="js/script.min.js">
       </script>
 
   </body>
