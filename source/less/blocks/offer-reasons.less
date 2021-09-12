@@ -5,6 +5,12 @@
     display: none;
   }
 
+  @media (min-width: @tablet-width) {
+    .offer-reasons__discription-tablet {
+      display: inline;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     background-color: @color-grey;
     z-index: 3;
@@ -23,6 +29,7 @@
 
   @media (min-width: @tablet-width) {
     font-weight: 300;
+    margin-top: 9px;
 
     .offer-reasons__discription-desktop {
       display: none;

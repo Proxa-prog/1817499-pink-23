@@ -9,6 +9,7 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
   </head>
   <body class="page__body">
 
@@ -77,11 +78,13 @@
           </div>
 
           <div class="user-catalog__panorama-wrapper">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/bridge_desktop.jpg 1x, img/bridge_desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/bridge_tablet.jpg 1x, img/bridge_tablet@2x.jpg 2x">
-              <img class="user-catalog__picture user-catalog__panorama" src="img/bridge.jpg" srcset="img/bridge@2x.jpg" alt="Мост над дорогой" width="320" height="137">
-            </picture>
+            <a class="user-catalog__item-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/bridge_desktop.jpg 1x, img/bridge_desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/bridge_tablet.jpg 1x, img/bridge_tablet@2x.jpg 2x">
+                <img class="user-catalog__picture user-catalog__panorama" src="img/bridge.jpg" srcset="img/bridge@2x.jpg" alt="Мост над дорогой" width="320" height="137">
+              </picture>
+          </a>
             <div class="content-wrapper">
               <div class="user-catalog__review catalog-review-panorama">
                 <h3 class="user-catalog__user-name user-catalog__user-name-panorama">Анна </h3>
@@ -100,15 +103,17 @@
           <div class="content-wrapper">
             <ul class="user-catalog__list">
               <li class="user-catalog__item">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/car_desktop.webp 1x, img/car_desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 660px)" srcset="img/car_tablet.webp 1x, img/car_tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/car.webp 1x, img/car@2x.webp 2x">
+                <a class="user-catalog__item-link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/car_desktop.webp 1x, img/car_desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 660px)" srcset="img/car_tablet.webp 1x, img/car_tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/car.webp 1x, img/car@2x.webp 2x">
 
-                  <source media="(min-width: 1200px)" srcset="img/car_desktop.jpg 1x, img/car_desktop@2x.jpg 2x">
-                  <source media="(min-width: 660px)" srcset="img/car_tablet.jpg 1x, img/car_tablet@2x.jpg 2x">
-                  <img class="user-catalog__picture" src="img/car.jpg" srcset="img/car@2x.jpg" alt="Фотосъёмка автомобиля" width="280" height="180">
-                </picture>
+                    <source media="(min-width: 1200px)" srcset="img/car_desktop.jpg 1x, img/car_desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)" srcset="img/car_tablet.jpg 1x, img/car_tablet@2x.jpg 2x">
+                    <img class="user-catalog__picture" src="img/car.jpg" srcset="img/car@2x.jpg" alt="Фотосъёмка автомобиля" width="280" height="180">
+                  </picture>
+                </a>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name">Левон </h3>
                   <span class="catalog-review__time">(5 часов назад)</span>
@@ -122,92 +127,112 @@
                 </div>
               </li>
               <li class="user-catalog__item">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/drums_desktop.jpg 1x, img/drums_desktop@2x.jpg 2x">
-                  <source media="(min-width: 660px)" srcset="img/drums_tablet.jpg 1x, img/drums_tablet@2x.jpg 2x">
-                  <img class="user-catalog__picture" src="img/drums.jpg" srcset="img/drums@2x.jpg" alt="Барабанная установка" width="280" height="180">
-                </picture>
+                <a class="user-catalog__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/drums_desktop.jpg 1x, img/drums_desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)" srcset="img/drums_tablet.jpg 1x, img/drums_tablet@2x.jpg 2x">
+                    <img class="user-catalog__picture" src="img/drums.jpg" srcset="img/drums@2x.jpg" alt="Барабанная установка" width="280" height="180">
+                  </picture>
+                </a>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name">Антон </h3>
                   <span class="catalog-review__time">(12 часов назад)</span>
                   <p class="catalog-review__text">
                     Соседи будут рады!
                   </p>
-                  <button class="user-catalog__like catalog-review__like" aria-label="Поставить лайк"><svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.46867 12C6.3589 12.0014 6.25012 11.9798 6.14988 11.9367C6.04963 11.8935 5.96033 11.8298 5.88815 11.75C1.95926 7.42 1.03665 6.44 0.860416 6.17C0.307088 5.49497 0.00416162 4.66056 0 3.8C0.00441359 3.07425 0.223059 2.36473 0.63034 1.7545C1.03762 1.14428 1.61668 0.658598 2.29973 0.354328C2.98278 0.0500576 3.74155 -0.0602132 4.48721 0.036425C5.23287 0.133063 5.93456 0.432611 6.51014 0.9C7.22774 0.319491 8.13412 0.00090711 9.07066 0C10.1136 0.00264761 11.1129 0.404172 11.8494 1.11652C12.5859 1.82888 12.9995 2.79391 12.9995 3.8C13.014 4.67715 12.6845 5.5272 12.0769 6.18L7.03883 11.74C6.9678 11.8185 6.88016 11.8814 6.78182 11.9246C6.68348 11.9677 6.5767 11.99 6.46867 11.99V12ZM2.07329 5.28C2.29099 5.54 4.63381 8.12 6.46867 10.14L10.947 5.2C11.3073 4.81798 11.5005 4.3163 11.486 3.8C11.486 3.18205 11.2316 2.5894 10.7786 2.15244C10.3256 1.71548 9.71126 1.47 9.07066 1.47C8.69007 1.47297 8.31512 1.55909 7.97398 1.7219C7.63285 1.8847 7.33439 2.11996 7.10103 2.41C7.02566 2.49603 6.9321 2.56553 6.82661 2.61382C6.72113 2.66211 6.60615 2.68809 6.48941 2.69C6.37337 2.68847 6.25936 2.6605 6.15667 2.60836C6.05398 2.55622 5.96552 2.4814 5.89852 2.39C5.66784 2.10104 5.37087 1.86758 5.03093 1.70796C4.69099 1.54833 4.31732 1.46688 3.93926 1.47C3.48505 1.47534 3.04153 1.6036 2.65919 1.84016C2.27684 2.07673 1.97103 2.41211 1.77658 2.8081C1.58213 3.2041 1.50684 3.64481 1.5593 4.08006C1.61176 4.51531 1.78985 4.9276 2.07329 5.27V5.28Z" fill="#D22856"/>
-                  </svg></button>
+                  <button class="user-catalog__like catalog-review__like" aria-label="Поставить лайк">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.46867 12C6.3589 12.0014 6.25012 11.9798 6.14988 11.9367C6.04963 11.8935 5.96033 11.8298 5.88815 11.75C1.95926 7.42 1.03665 6.44 0.860416 6.17C0.307088 5.49497 0.00416162 4.66056 0 3.8C0.00441359 3.07425 0.223059 2.36473 0.63034 1.7545C1.03762 1.14428 1.61668 0.658598 2.29973 0.354328C2.98278 0.0500576 3.74155 -0.0602132 4.48721 0.036425C5.23287 0.133063 5.93456 0.432611 6.51014 0.9C7.22774 0.319491 8.13412 0.00090711 9.07066 0C10.1136 0.00264761 11.1129 0.404172 11.8494 1.11652C12.5859 1.82888 12.9995 2.79391 12.9995 3.8C13.014 4.67715 12.6845 5.5272 12.0769 6.18L7.03883 11.74C6.9678 11.8185 6.88016 11.8814 6.78182 11.9246C6.68348 11.9677 6.5767 11.99 6.46867 11.99V12ZM2.07329 5.28C2.29099 5.54 4.63381 8.12 6.46867 10.14L10.947 5.2C11.3073 4.81798 11.5005 4.3163 11.486 3.8C11.486 3.18205 11.2316 2.5894 10.7786 2.15244C10.3256 1.71548 9.71126 1.47 9.07066 1.47C8.69007 1.47297 8.31512 1.55909 7.97398 1.7219C7.63285 1.8847 7.33439 2.11996 7.10103 2.41C7.02566 2.49603 6.9321 2.56553 6.82661 2.61382C6.72113 2.66211 6.60615 2.68809 6.48941 2.69C6.37337 2.68847 6.25936 2.6605 6.15667 2.60836C6.05398 2.55622 5.96552 2.4814 5.89852 2.39C5.66784 2.10104 5.37087 1.86758 5.03093 1.70796C4.69099 1.54833 4.31732 1.46688 3.93926 1.47C3.48505 1.47534 3.04153 1.6036 2.65919 1.84016C2.27684 2.07673 1.97103 2.41211 1.77658 2.8081C1.58213 3.2041 1.50684 3.64481 1.5593 4.08006C1.61176 4.51531 1.78985 4.9276 2.07329 5.27V5.28Z" fill="#D22856"/>
+                    </svg>
+                  </button>
                   <p class="user-catalog__how-much-like">Нравится: 666</p>
                 </div>
               </li>
               <li class="user-catalog__item">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/glass_desktop.jpg 1x, img/glass_desktop@2x.jpg 2x">
-                  <source media="(min-width: 660px)" srcset="img/glass_tablet.jpg 1x, img/glass_tablet@2x.jpg 2x">
-                  <img class="user-catalog__picture" src="img/glass.jpg" srcset="img/glass@2x.jpg" alt="Застеклённый потолок" width="280" height="180">
-                </picture>
+                <a class="user-catalog__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/glass_desktop.jpg 1x, img/glass_desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)" srcset="img/glass_tablet.jpg 1x, img/glass_tablet@2x.jpg 2x">
+                    <img class="user-catalog__picture" src="img/glass.jpg" srcset="img/glass@2x.jpg" alt="Застеклённый потолок" width="280" height="180">
+                  </picture>
+                </a>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name">Борис </h3>
                   <span class="catalog-review__time">(20 часов назад)</span>
                   <p class="catalog-review__text">
                     Здесь могла быть ваша цитата о высоком и вечном.
                   </p>
-                  <button class="user-catalog__like catalog-review__like" aria-label="Поставить лайк"><svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.46867 12C6.3589 12.0014 6.25012 11.9798 6.14988 11.9367C6.04963 11.8935 5.96033 11.8298 5.88815 11.75C1.95926 7.42 1.03665 6.44 0.860416 6.17C0.307088 5.49497 0.00416162 4.66056 0 3.8C0.00441359 3.07425 0.223059 2.36473 0.63034 1.7545C1.03762 1.14428 1.61668 0.658598 2.29973 0.354328C2.98278 0.0500576 3.74155 -0.0602132 4.48721 0.036425C5.23287 0.133063 5.93456 0.432611 6.51014 0.9C7.22774 0.319491 8.13412 0.00090711 9.07066 0C10.1136 0.00264761 11.1129 0.404172 11.8494 1.11652C12.5859 1.82888 12.9995 2.79391 12.9995 3.8C13.014 4.67715 12.6845 5.5272 12.0769 6.18L7.03883 11.74C6.9678 11.8185 6.88016 11.8814 6.78182 11.9246C6.68348 11.9677 6.5767 11.99 6.46867 11.99V12ZM2.07329 5.28C2.29099 5.54 4.63381 8.12 6.46867 10.14L10.947 5.2C11.3073 4.81798 11.5005 4.3163 11.486 3.8C11.486 3.18205 11.2316 2.5894 10.7786 2.15244C10.3256 1.71548 9.71126 1.47 9.07066 1.47C8.69007 1.47297 8.31512 1.55909 7.97398 1.7219C7.63285 1.8847 7.33439 2.11996 7.10103 2.41C7.02566 2.49603 6.9321 2.56553 6.82661 2.61382C6.72113 2.66211 6.60615 2.68809 6.48941 2.69C6.37337 2.68847 6.25936 2.6605 6.15667 2.60836C6.05398 2.55622 5.96552 2.4814 5.89852 2.39C5.66784 2.10104 5.37087 1.86758 5.03093 1.70796C4.69099 1.54833 4.31732 1.46688 3.93926 1.47C3.48505 1.47534 3.04153 1.6036 2.65919 1.84016C2.27684 2.07673 1.97103 2.41211 1.77658 2.8081C1.58213 3.2041 1.50684 3.64481 1.5593 4.08006C1.61176 4.51531 1.78985 4.9276 2.07329 5.27V5.28Z" fill="#D22856"/>
-                  </svg></button>
+                  <button class="user-catalog__like catalog-review__like" aria-label="Поставить лайк">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.46867 12C6.3589 12.0014 6.25012 11.9798 6.14988 11.9367C6.04963 11.8935 5.96033 11.8298 5.88815 11.75C1.95926 7.42 1.03665 6.44 0.860416 6.17C0.307088 5.49497 0.00416162 4.66056 0 3.8C0.00441359 3.07425 0.223059 2.36473 0.63034 1.7545C1.03762 1.14428 1.61668 0.658598 2.29973 0.354328C2.98278 0.0500576 3.74155 -0.0602132 4.48721 0.036425C5.23287 0.133063 5.93456 0.432611 6.51014 0.9C7.22774 0.319491 8.13412 0.00090711 9.07066 0C10.1136 0.00264761 11.1129 0.404172 11.8494 1.11652C12.5859 1.82888 12.9995 2.79391 12.9995 3.8C13.014 4.67715 12.6845 5.5272 12.0769 6.18L7.03883 11.74C6.9678 11.8185 6.88016 11.8814 6.78182 11.9246C6.68348 11.9677 6.5767 11.99 6.46867 11.99V12ZM2.07329 5.28C2.29099 5.54 4.63381 8.12 6.46867 10.14L10.947 5.2C11.3073 4.81798 11.5005 4.3163 11.486 3.8C11.486 3.18205 11.2316 2.5894 10.7786 2.15244C10.3256 1.71548 9.71126 1.47 9.07066 1.47C8.69007 1.47297 8.31512 1.55909 7.97398 1.7219C7.63285 1.8847 7.33439 2.11996 7.10103 2.41C7.02566 2.49603 6.9321 2.56553 6.82661 2.61382C6.72113 2.66211 6.60615 2.68809 6.48941 2.69C6.37337 2.68847 6.25936 2.6605 6.15667 2.60836C6.05398 2.55622 5.96552 2.4814 5.89852 2.39C5.66784 2.10104 5.37087 1.86758 5.03093 1.70796C4.69099 1.54833 4.31732 1.46688 3.93926 1.47C3.48505 1.47534 3.04153 1.6036 2.65919 1.84016C2.27684 2.07673 1.97103 2.41211 1.77658 2.8081C1.58213 3.2041 1.50684 3.64481 1.5593 4.08006C1.61176 4.51531 1.78985 4.9276 2.07329 5.27V5.28Z" fill="#D22856"/>
+                    </svg>
+                  </button>
                   <p class="user-catalog__how-much-like">Нравится: 215</p>
                 </div>
               </li>
               <li class="user-catalog__item">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/fair_desktop.jpg 1x, img/fair_desktop@2x.jpg 2x">
-                  <source media="(min-width: 660px)" srcset="img/fair_tablet.jpg 1x, img/fair_tablet@2x.jpg 2x">
-                  <img class="user-catalog__picture" src="img/fair.jpg" srcset="img/fair@2x.jpg" alt="Кубанская ярмарка" width="280" height="180">
-                </picture>
+                <a class="user-catalog__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/fair_desktop.jpg 1x, img/fair_desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)" srcset="img/fair_tablet.jpg 1x, img/fair_tablet@2x.jpg 2x">
+                    <img class="user-catalog__picture" src="img/fair.jpg" srcset="img/fair@2x.jpg" alt="Кубанская ярмарка" width="280" height="180">
+                  </picture>
+                </a>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name">Сергей </h3>
                   <span class="catalog-review__time">(25 часов назад)</span>
                   <p class="catalog-review__text">
                     Самая кубанская в мире!
                   </p>
-                  <button class="user-catalog__like catalog-review__like" aria-label="Поставить лайк"><svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.46867 12C6.3589 12.0014 6.25012 11.9798 6.14988 11.9367C6.04963 11.8935 5.96033 11.8298 5.88815 11.75C1.95926 7.42 1.03665 6.44 0.860416 6.17C0.307088 5.49497 0.00416162 4.66056 0 3.8C0.00441359 3.07425 0.223059 2.36473 0.63034 1.7545C1.03762 1.14428 1.61668 0.658598 2.29973 0.354328C2.98278 0.0500576 3.74155 -0.0602132 4.48721 0.036425C5.23287 0.133063 5.93456 0.432611 6.51014 0.9C7.22774 0.319491 8.13412 0.00090711 9.07066 0C10.1136 0.00264761 11.1129 0.404172 11.8494 1.11652C12.5859 1.82888 12.9995 2.79391 12.9995 3.8C13.014 4.67715 12.6845 5.5272 12.0769 6.18L7.03883 11.74C6.9678 11.8185 6.88016 11.8814 6.78182 11.9246C6.68348 11.9677 6.5767 11.99 6.46867 11.99V12ZM2.07329 5.28C2.29099 5.54 4.63381 8.12 6.46867 10.14L10.947 5.2C11.3073 4.81798 11.5005 4.3163 11.486 3.8C11.486 3.18205 11.2316 2.5894 10.7786 2.15244C10.3256 1.71548 9.71126 1.47 9.07066 1.47C8.69007 1.47297 8.31512 1.55909 7.97398 1.7219C7.63285 1.8847 7.33439 2.11996 7.10103 2.41C7.02566 2.49603 6.9321 2.56553 6.82661 2.61382C6.72113 2.66211 6.60615 2.68809 6.48941 2.69C6.37337 2.68847 6.25936 2.6605 6.15667 2.60836C6.05398 2.55622 5.96552 2.4814 5.89852 2.39C5.66784 2.10104 5.37087 1.86758 5.03093 1.70796C4.69099 1.54833 4.31732 1.46688 3.93926 1.47C3.48505 1.47534 3.04153 1.6036 2.65919 1.84016C2.27684 2.07673 1.97103 2.41211 1.77658 2.8081C1.58213 3.2041 1.50684 3.64481 1.5593 4.08006C1.61176 4.51531 1.78985 4.9276 2.07329 5.27V5.28Z" fill="#D22856"/>
-                  </svg></button>
+                  <button class="user-catalog__like catalog-review__like" aria-label="Поставить лайк">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.46867 12C6.3589 12.0014 6.25012 11.9798 6.14988 11.9367C6.04963 11.8935 5.96033 11.8298 5.88815 11.75C1.95926 7.42 1.03665 6.44 0.860416 6.17C0.307088 5.49497 0.00416162 4.66056 0 3.8C0.00441359 3.07425 0.223059 2.36473 0.63034 1.7545C1.03762 1.14428 1.61668 0.658598 2.29973 0.354328C2.98278 0.0500576 3.74155 -0.0602132 4.48721 0.036425C5.23287 0.133063 5.93456 0.432611 6.51014 0.9C7.22774 0.319491 8.13412 0.00090711 9.07066 0C10.1136 0.00264761 11.1129 0.404172 11.8494 1.11652C12.5859 1.82888 12.9995 2.79391 12.9995 3.8C13.014 4.67715 12.6845 5.5272 12.0769 6.18L7.03883 11.74C6.9678 11.8185 6.88016 11.8814 6.78182 11.9246C6.68348 11.9677 6.5767 11.99 6.46867 11.99V12ZM2.07329 5.28C2.29099 5.54 4.63381 8.12 6.46867 10.14L10.947 5.2C11.3073 4.81798 11.5005 4.3163 11.486 3.8C11.486 3.18205 11.2316 2.5894 10.7786 2.15244C10.3256 1.71548 9.71126 1.47 9.07066 1.47C8.69007 1.47297 8.31512 1.55909 7.97398 1.7219C7.63285 1.8847 7.33439 2.11996 7.10103 2.41C7.02566 2.49603 6.9321 2.56553 6.82661 2.61382C6.72113 2.66211 6.60615 2.68809 6.48941 2.69C6.37337 2.68847 6.25936 2.6605 6.15667 2.60836C6.05398 2.55622 5.96552 2.4814 5.89852 2.39C5.66784 2.10104 5.37087 1.86758 5.03093 1.70796C4.69099 1.54833 4.31732 1.46688 3.93926 1.47C3.48505 1.47534 3.04153 1.6036 2.65919 1.84016C2.27684 2.07673 1.97103 2.41211 1.77658 2.8081C1.58213 3.2041 1.50684 3.64481 1.5593 4.08006C1.61176 4.51531 1.78985 4.9276 2.07329 5.27V5.28Z" fill="#D22856"/>
+                    </svg>
+                  </button>
                   <p class="user-catalog__how-much-like">Нравится: 4</p>
                 </div>
               </li>
               <li class="user-catalog__item">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/mountain_desktop.jpg 1x, img/mountain_desktop@2x.jpg 2x">
-                  <source media="(min-width: 660px)" srcset="img/mountain_tablet.jpg 1x, img/mountain_tablet@2x.jpg 2x">
-                  <img class="user-catalog__picture" src="img/mountain.jpg" srcset="img/mountain@2x.jpg" alt="На вершине горы" width="280" height="180">
-                </picture>
+                <a class="user-catalog__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/mountain_desktop.jpg 1x, img/mountain_desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)" srcset="img/mountain_tablet.jpg 1x, img/mountain_tablet@2x.jpg 2x">
+                    <img class="user-catalog__picture" src="img/mountain.jpg" srcset="img/mountain@2x.jpg" alt="На вершине горы" width="280" height="180">
+                  </picture>
+                </a>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name">Максим </h3>
                   <span class="catalog-review__time">(40 часов назад)</span>
                   <p class="catalog-review__text">
                     Где снег-то?
                   </p>
-                  <button class="user-catalog__like catalog-review__like" aria-label="Поставить лайк"><svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.46867 12C6.3589 12.0014 6.25012 11.9798 6.14988 11.9367C6.04963 11.8935 5.96033 11.8298 5.88815 11.75C1.95926 7.42 1.03665 6.44 0.860416 6.17C0.307088 5.49497 0.00416162 4.66056 0 3.8C0.00441359 3.07425 0.223059 2.36473 0.63034 1.7545C1.03762 1.14428 1.61668 0.658598 2.29973 0.354328C2.98278 0.0500576 3.74155 -0.0602132 4.48721 0.036425C5.23287 0.133063 5.93456 0.432611 6.51014 0.9C7.22774 0.319491 8.13412 0.00090711 9.07066 0C10.1136 0.00264761 11.1129 0.404172 11.8494 1.11652C12.5859 1.82888 12.9995 2.79391 12.9995 3.8C13.014 4.67715 12.6845 5.5272 12.0769 6.18L7.03883 11.74C6.9678 11.8185 6.88016 11.8814 6.78182 11.9246C6.68348 11.9677 6.5767 11.99 6.46867 11.99V12ZM2.07329 5.28C2.29099 5.54 4.63381 8.12 6.46867 10.14L10.947 5.2C11.3073 4.81798 11.5005 4.3163 11.486 3.8C11.486 3.18205 11.2316 2.5894 10.7786 2.15244C10.3256 1.71548 9.71126 1.47 9.07066 1.47C8.69007 1.47297 8.31512 1.55909 7.97398 1.7219C7.63285 1.8847 7.33439 2.11996 7.10103 2.41C7.02566 2.49603 6.9321 2.56553 6.82661 2.61382C6.72113 2.66211 6.60615 2.68809 6.48941 2.69C6.37337 2.68847 6.25936 2.6605 6.15667 2.60836C6.05398 2.55622 5.96552 2.4814 5.89852 2.39C5.66784 2.10104 5.37087 1.86758 5.03093 1.70796C4.69099 1.54833 4.31732 1.46688 3.93926 1.47C3.48505 1.47534 3.04153 1.6036 2.65919 1.84016C2.27684 2.07673 1.97103 2.41211 1.77658 2.8081C1.58213 3.2041 1.50684 3.64481 1.5593 4.08006C1.61176 4.51531 1.78985 4.9276 2.07329 5.27V5.28Z" fill="#D22856"/>
-                  </svg></button>
+                  <button class="user-catalog__like catalog-review__like" aria-label="Поставить лайк">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.46867 12C6.3589 12.0014 6.25012 11.9798 6.14988 11.9367C6.04963 11.8935 5.96033 11.8298 5.88815 11.75C1.95926 7.42 1.03665 6.44 0.860416 6.17C0.307088 5.49497 0.00416162 4.66056 0 3.8C0.00441359 3.07425 0.223059 2.36473 0.63034 1.7545C1.03762 1.14428 1.61668 0.658598 2.29973 0.354328C2.98278 0.0500576 3.74155 -0.0602132 4.48721 0.036425C5.23287 0.133063 5.93456 0.432611 6.51014 0.9C7.22774 0.319491 8.13412 0.00090711 9.07066 0C10.1136 0.00264761 11.1129 0.404172 11.8494 1.11652C12.5859 1.82888 12.9995 2.79391 12.9995 3.8C13.014 4.67715 12.6845 5.5272 12.0769 6.18L7.03883 11.74C6.9678 11.8185 6.88016 11.8814 6.78182 11.9246C6.68348 11.9677 6.5767 11.99 6.46867 11.99V12ZM2.07329 5.28C2.29099 5.54 4.63381 8.12 6.46867 10.14L10.947 5.2C11.3073 4.81798 11.5005 4.3163 11.486 3.8C11.486 3.18205 11.2316 2.5894 10.7786 2.15244C10.3256 1.71548 9.71126 1.47 9.07066 1.47C8.69007 1.47297 8.31512 1.55909 7.97398 1.7219C7.63285 1.8847 7.33439 2.11996 7.10103 2.41C7.02566 2.49603 6.9321 2.56553 6.82661 2.61382C6.72113 2.66211 6.60615 2.68809 6.48941 2.69C6.37337 2.68847 6.25936 2.6605 6.15667 2.60836C6.05398 2.55622 5.96552 2.4814 5.89852 2.39C5.66784 2.10104 5.37087 1.86758 5.03093 1.70796C4.69099 1.54833 4.31732 1.46688 3.93926 1.47C3.48505 1.47534 3.04153 1.6036 2.65919 1.84016C2.27684 2.07673 1.97103 2.41211 1.77658 2.8081C1.58213 3.2041 1.50684 3.64481 1.5593 4.08006C1.61176 4.51531 1.78985 4.9276 2.07329 5.27V5.28Z" fill="#D22856"/>
+                    </svg>
+                  </button>
                   <p class="user-catalog__how-much-like">Нравится: 150</p>
                 </div>
               </li>
               <li class="user-catalog__item">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/airplane_desktop.jpg 1x, img/airplane_desktop@2x.jpg 2x">
-                  <source media="(min-width: 660px)" srcset="img/airplane_tablet.jpg 1x, img/airplane_tablet@2x.jpg 2x">
-                  <img class="user-catalog__picture" src="img/airplane.jpg" srcset="img/airplane@2x.jpg" alt="Крыло самолёта" width="280" height="180">
-                </picture>
+                <a class="user-catalog__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/airplane_desktop.jpg 1x, img/airplane_desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)" srcset="img/airplane_tablet.jpg 1x, img/airplane_tablet@2x.jpg 2x">
+                    <img class="user-catalog__picture" src="img/airplane.jpg" srcset="img/airplane@2x.jpg" alt="Крыло самолёта" width="280" height="180">
+                  </picture>
+                </a>
                 <div class="user-catalog__review catalog-review">
                   <h3 class="catalog-review__user-name" >Надежда </h3>
                   <span class="catalog-review__time">(45 часов назад)</span>
                   <p class="catalog-review__text">
                     Всем GM и взаимные лайки!
                   </p>
-                  <button class="user-catalog__like catalog-review__like" aria-label="Поставить лайк"><svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.46867 12C6.3589 12.0014 6.25012 11.9798 6.14988 11.9367C6.04963 11.8935 5.96033 11.8298 5.88815 11.75C1.95926 7.42 1.03665 6.44 0.860416 6.17C0.307088 5.49497 0.00416162 4.66056 0 3.8C0.00441359 3.07425 0.223059 2.36473 0.63034 1.7545C1.03762 1.14428 1.61668 0.658598 2.29973 0.354328C2.98278 0.0500576 3.74155 -0.0602132 4.48721 0.036425C5.23287 0.133063 5.93456 0.432611 6.51014 0.9C7.22774 0.319491 8.13412 0.00090711 9.07066 0C10.1136 0.00264761 11.1129 0.404172 11.8494 1.11652C12.5859 1.82888 12.9995 2.79391 12.9995 3.8C13.014 4.67715 12.6845 5.5272 12.0769 6.18L7.03883 11.74C6.9678 11.8185 6.88016 11.8814 6.78182 11.9246C6.68348 11.9677 6.5767 11.99 6.46867 11.99V12ZM2.07329 5.28C2.29099 5.54 4.63381 8.12 6.46867 10.14L10.947 5.2C11.3073 4.81798 11.5005 4.3163 11.486 3.8C11.486 3.18205 11.2316 2.5894 10.7786 2.15244C10.3256 1.71548 9.71126 1.47 9.07066 1.47C8.69007 1.47297 8.31512 1.55909 7.97398 1.7219C7.63285 1.8847 7.33439 2.11996 7.10103 2.41C7.02566 2.49603 6.9321 2.56553 6.82661 2.61382C6.72113 2.66211 6.60615 2.68809 6.48941 2.69C6.37337 2.68847 6.25936 2.6605 6.15667 2.60836C6.05398 2.55622 5.96552 2.4814 5.89852 2.39C5.66784 2.10104 5.37087 1.86758 5.03093 1.70796C4.69099 1.54833 4.31732 1.46688 3.93926 1.47C3.48505 1.47534 3.04153 1.6036 2.65919 1.84016C2.27684 2.07673 1.97103 2.41211 1.77658 2.8081C1.58213 3.2041 1.50684 3.64481 1.5593 4.08006C1.61176 4.51531 1.78985 4.9276 2.07329 5.27V5.28Z" fill="#D22856"/>
-                  </svg></button>
+                  <button class="user-catalog__like catalog-review__like" aria-label="Поставить лайк">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.46867 12C6.3589 12.0014 6.25012 11.9798 6.14988 11.9367C6.04963 11.8935 5.96033 11.8298 5.88815 11.75C1.95926 7.42 1.03665 6.44 0.860416 6.17C0.307088 5.49497 0.00416162 4.66056 0 3.8C0.00441359 3.07425 0.223059 2.36473 0.63034 1.7545C1.03762 1.14428 1.61668 0.658598 2.29973 0.354328C2.98278 0.0500576 3.74155 -0.0602132 4.48721 0.036425C5.23287 0.133063 5.93456 0.432611 6.51014 0.9C7.22774 0.319491 8.13412 0.00090711 9.07066 0C10.1136 0.00264761 11.1129 0.404172 11.8494 1.11652C12.5859 1.82888 12.9995 2.79391 12.9995 3.8C13.014 4.67715 12.6845 5.5272 12.0769 6.18L7.03883 11.74C6.9678 11.8185 6.88016 11.8814 6.78182 11.9246C6.68348 11.9677 6.5767 11.99 6.46867 11.99V12ZM2.07329 5.28C2.29099 5.54 4.63381 8.12 6.46867 10.14L10.947 5.2C11.3073 4.81798 11.5005 4.3163 11.486 3.8C11.486 3.18205 11.2316 2.5894 10.7786 2.15244C10.3256 1.71548 9.71126 1.47 9.07066 1.47C8.69007 1.47297 8.31512 1.55909 7.97398 1.7219C7.63285 1.8847 7.33439 2.11996 7.10103 2.41C7.02566 2.49603 6.9321 2.56553 6.82661 2.61382C6.72113 2.66211 6.60615 2.68809 6.48941 2.69C6.37337 2.68847 6.25936 2.6605 6.15667 2.60836C6.05398 2.55622 5.96552 2.4814 5.89852 2.39C5.66784 2.10104 5.37087 1.86758 5.03093 1.70796C4.69099 1.54833 4.31732 1.46688 3.93926 1.47C3.48505 1.47534 3.04153 1.6036 2.65919 1.84016C2.27684 2.07673 1.97103 2.41211 1.77658 2.8081C1.58213 3.2041 1.50684 3.64481 1.5593 4.08006C1.61176 4.51531 1.78985 4.9276 2.07329 5.27V5.28Z" fill="#D22856"/>
+                    </svg>
+                  </button>
                   <p class="user-catalog__how-much-like">Нравится: 2560</p>
                 </div>
               </li>
@@ -252,10 +277,7 @@
                         <li class="user-repost__filter-item">
                           <button class="user-repost__button-inactive user-repost-button" aria-label="Заливка" type="button">
                             <svg class="user-repost-button__sprite user-repost-button__fill" width="44" height="44" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <g opacity="0.3">
-                                <path d="M33.12 17.88L15.24 0L12.41 2.83L17.17 7.59L6.88 17.88C6.3182 18.4425 6.00264 19.205 6.00264 20C6.00264 20.795 6.3182 21.5575 6.88 22.12L17.88 33.12C18.4425 33.6818 19.205 33.9974 20 33.9974C20.795 33.9974 21.5575 33.6818 22.12 33.12L33.12 22.12C33.6818 21.5575 33.9974 20.795 33.9974 20C33.9974 19.205 33.6818 18.4425 33.12 17.88ZM10.41 20L20 10.42L29.59 20H10.41ZM38 23C38 23 34 27.33 34 30C34 31.0609 34.4214 32.0783 35.1716 32.8284C35.9217 33.5786 36.9391 34 38 34C39.0609 34 40.0783 33.5786 40.8284 32.8284C41.5786 32.0783 42 31.0609 42 30C42 27.33 38 23 38 23Z" fill="#283645"/>
-                                <path d="M48 40H0V43H48V40Z" fill="#283645"/>
-                              </g>
+                              <use xlink:href="img/sprite.svg#fill"></use>
                             </svg>
                           </button>
                           <div class="user-repost__range-controls range-controls range-controls-fill">
@@ -266,12 +288,9 @@
                         </li>
 
                         <li class="user-repost__filter-item">
-                          <button class="user-repost__button-inactive user-repost-button user-repost-button-contrast" aria-label="Контраст" type="button">
-                            <svg class="user-repost-button__sprite" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <g opacity="0.3">
-                                <path d="M16 4C18.3734 4 20.6935 4.70379 22.6669 6.02236C24.6402 7.34094 26.1783 9.21509 27.0866 11.4078C27.9948 13.6005 28.2325 16.0133 27.7694 18.3411C27.3064 20.6689 26.1635 22.8071 24.4853 24.4853C22.8071 26.1635 20.6689 27.3064 18.3411 27.7694C16.0133 28.2324 13.6005 27.9948 11.4078 27.0866C9.21509 26.1783 7.34095 24.6402 6.02237 22.6668C4.70379 20.6935 4.00001 18.3734 4.00001 16C4.00001 12.8174 5.26429 9.76515 7.51473 7.51472C9.76516 5.26428 12.8174 4 16 4ZM16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0Z" fill="#283645"/>
-                                <path d="M16 24.29C18.1536 24.1422 20.1708 23.1824 21.644 21.6046C23.1172 20.0268 23.9366 17.9486 23.9366 15.79C23.9366 13.6314 23.1172 11.5532 21.644 9.97538C20.1708 8.39759 18.1536 7.43782 16 7.29" fill="#283645"/>
-                              </g>
+                          <button class="user-repost__button-inactive user-repost-button" aria-label="Контраст" type="button">
+                            <svg class="user-repost-button__sprite user-repost-button__contrast" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use xlink:href="img/sprite.svg#contrast"></use>
                             </svg>
                           </button>
                           <div class="user-repost__range-controls range-controls range-controls-contrast">
@@ -301,6 +320,9 @@
           <div class="page-footer__logo page-footer__logo-catalog">
             <svg class="page-footer__logo-pink" width="145" height="40" viewBox="0 0 145 40" fill="none">
               <use xlink:href="img/sprite.svg#footer-logo"></use>
+            </svg>
+            <svg class="page-footer__logo-pink-desktop" width="147" height="40" viewBox="0 0 147 40" fill="none">
+              <use xlink:href="img/sprite.svg#footer-desktop"></use>
             </svg>
           </div>
           <div class="page-footer__social page-footer__social-catalog">
