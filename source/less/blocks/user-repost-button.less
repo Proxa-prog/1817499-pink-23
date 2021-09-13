@@ -3,11 +3,34 @@
     fill-opacity: 0.5;
   }
 
+  .user-repost-button__fill {
+    fill: @color-text-black;
+    fill-opacity: 0.3;
+  }
+
+  .user-repost-button__contrast {
+    fill: @color-text-black;
+    fill-opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     svg {
       width: 22px;
       height: 22px;
+    }
+
+    .user-repost-button__sprite {
+      fill-opacity: 1;
+    }
+
+    .user-repost-button__fill {
       fill: @color-pink;
+      fill-opacity: 1;
+    }
+
+    .user-repost-button__contrast {
+      fill: @color-pink;
+      fill-opacity: 1;
     }
   }
 
@@ -15,22 +38,17 @@
     svg {
       width: 44px;
       height: 44px;
+      fill: @color-pink;
     }
-  }
-}
 
-.user-repost-button__fill {
-  @media (min-width: @tablet-width) {
-    width: 30px;
-    height: 23px;
-  }
-}
+    .user-repost-button__fill {
+      width: 40px;
+      height: 40px;
+    }
 
-.user-repost-button-contrast {
-  @media (min-width: @desktop-width) {
-    svg {
-      width: 33px;
-      height: 33px;
+    .user-repost-button__contrast {
+      width: 37px;
+      height: 37px;
     }
   }
 }

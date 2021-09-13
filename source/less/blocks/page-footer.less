@@ -67,6 +67,21 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+
+.page-footer__logo-pink-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+    width: 147px;
+    height: 40px;
+  }
 }
 
 .page-footer__lists {
@@ -98,6 +113,12 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 71px;
+  }
+}
+
+.page-footer__social-index {
+  @media (min-width: @tablet-width) {
+    padding-top: 38px;
   }
 }
 

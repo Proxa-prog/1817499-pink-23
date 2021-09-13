@@ -8,6 +8,9 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <title>Pink</title>
   </head>
   <body class="page__body">
@@ -16,7 +19,7 @@
 
         <div class="page-header__wrapper">
           <nav class="main-nav main-nav--nojs">
-            <div class="content-wrapper">
+            <div class="main-nav__button-wrapper">
               <a class="page-header__logo" href="#">
                 <svg class="page-header__logo-phone" width="80" height="23" viewBox="0 0 145 40" fill="none">
                   <use xlink:href="img/sprite.svg#mobile-logo"></use>
@@ -61,26 +64,28 @@
           </nav>
         </div>
 
-        <div class="content-wrapper">
-          <p class="page-header__tagline">Взгляните на жизнь иначе!</p>
-        </div>
+        <div class="page-header__download-wrapper-tagline">
+          <div class="content-wrapper page-header__content-wrapper">
+            <p class="page-header__tagline">Взгляните на жизнь иначе!</p>
+          </div>
 
-        <div class="page-header__download-wrapper">
-          <div class="content-wrapper">
-            <div class="page-header__download">
-              <a class="page-header__button-download" href="https://www.apple.com/ru/shop">Скачать приложение</a>
-              <ul class="page-header__download-list">
-                <li class="page-header__apple">
-                  <a href="https://www.apple.com/ru/shop"><img src="img/apple_logo.svg" alt="Скачать на Apple" width="47" height="56"></a>
-                </li>
-                <li class="page-header__android">
-                  <a href="https://play.google.com/store?hl=ru&gl=US"><img src="img/android_logo.svg" alt="Скачать на Android" width="43" height="47"></a>
-                </li>
-                <li class="page-header__microsoft">
-                  <a href="https://www.microsoft.com/ru-ru/store/apps/windows"><img src="img/microsoft_logo.svg" alt="Скачать на Microsoft" width="44" height="41"></a>
-                </li>
-              </ul>
-              <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          <div class="page-header__download-wrapper">
+            <div class="content-wrapper page-header__download-content-wrapper">
+              <div class="page-header__download">
+                <a class="page-header__button-download" href="https://www.apple.com/ru/shop">Скачать приложение</a>
+                <ul class="page-header__download-list">
+                  <li class="page-header__apple">
+                    <a href="https://www.apple.com/ru/shop"><img src="img/apple_logo.svg" alt="Скачать на Apple" width="47" height="56"></a>
+                  </li>
+                  <li class="page-header__android">
+                    <a href="https://play.google.com/store?hl=ru&gl=US"><img src="img/android_logo.svg" alt="Скачать на Android" width="43" height="47"></a>
+                  </li>
+                  <li class="page-header__microsoft">
+                    <a href="https://www.microsoft.com/ru-ru/store/apps/windows"><img src="img/microsoft_logo.svg" alt="Скачать на Microsoft" width="44" height="41"></a>
+                  </li>
+                </ul>
+                <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+              </div>
             </div>
           </div>
         </div>
@@ -106,7 +111,7 @@
                           <div class="offer-reasons">
                             <h3 class="offer__header">Поднимает настроение</h3>
                             <p class="offer-reasons__discription">
-                              Приложение позволит вам победить осеннюю хандру и депрессию<br> буквально в нельколько кликов!
+                              Приложение позволит вам победить осеннюю хандру и депрессию&thinsp;<br>буквально в несколько кликов!
                             </p>
                           </div>
                         </li>
@@ -115,7 +120,7 @@
                           <div class="offer-reasons">
                             <h3 class="offer__header">Меняет мир вокруг</h3>
                             <p class="offer-reasons__discription">
-                              Сделайте снимок и <br class="offer-reasons__discription-desktop"> украсьте его смайликом или текстовой подписью, чтобы<br class="offer-reasons__discription-tablet"> усилить эффект
+                              Сделайте снимок и&thinsp;<br class="offer-reasons__discription-desktop">украсьте его смайликом или текстовой подписью, чтобы&thinsp;<br class="offer-reasons__discription-tablet">усилить эффект
                             </p>
                           </div>
                         </li>
@@ -124,7 +129,7 @@
                           <div class="offer-reasons">
                             <h3 class="offer__header">Заводит новых друзей</h3>
                             <p class="offer-reasons__discription">
-                              Ставьте лайки, комментируйте,<br> делитесь фотографиями с друзьями и заводите новых
+                              Ставьте лайки, комментируйте,&thinsp;<br>делитесь фотографиями с друзьями и заводите новых
                             </p>
                           </div>
                         </li>
@@ -136,10 +141,10 @@
               <div class="offer__effect effect">
                 <div class="content-wrapper">
                   <div class="effect__container">
-                    <h2 class="effect__header">Эффект<br> на 24 часа!</h2>
+                    <h2 class="effect__header">Эффект&thinsp;<br>на 24 часа!</h2>
                     <p class="effect__discription">
-                      Британские учёные провели исследования и доказали,<br class="effect__discription-desktop"> что положительный
-                      эффект<br> от использования приложения длится целые сутки!
+                      Британские учёные провели исследования и доказали,&thinsp;<br class="effect__discription-desktop">что положительный
+                      эффект&thinsp;<br>от использования приложения длится целые сутки!
                     </p>
                     <a class="effect__more-details" href="#" >Узнать больше об исследовании</a>
                   </div>
@@ -158,7 +163,7 @@
                     <h3 class="reviews__item-title">Николай Петров</h3>
                     <p class="reviews__title-caption">25 лет, водитель травмвая</p>
                     <p class="reviews__item-discription">
-                      &#171;Это приложение перевернуло мой мир <br> и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой<br> в комментариях к выложенной фотографии!&#187;
+                      &#171;Это приложение перевернуло мой мир&thinsp;<br>и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой&thinsp;<br>в комментариях к выложенной фотографии!&#187;
                     </p>
                   </li>
                 </ul>
@@ -174,34 +179,103 @@
 
           <section class="price-list">
               <h2 class="visually-hidden">Выбор тарифа</h2>
-              <div class="price-list__slider">
-                <table class="price-list__table">
-                  <tr class="price-list__header table-header">
-                    <th class="table-header__item"></th>
-                    <th class="price-list__base-header table-header__item">База<br><span>1,99 USD</span></th>
-                    <th class="table-header__item table-header__item-standart">Стандарт<br><span>3,99 USD</span></th>
-                    <th class="table-header__item">Анлим<br><span>9,99 USD</span></th>
-                  </tr>
-                  <tr class="price-list__first-line">
-                    <td>Розовый фильтр</td>
-                    <td></td>
-                    <td class="price-list__base-first-line"><span>Розовый фильтр</span></td>
-                    <td></td>
-                  </tr>
-                  <tr class="price-list__second-line">
-                    <td>Смайлики</td>
-                    <td></td>
-                    <td class="price-list__base-second-line"><span>Смайлики</span></td>
-                    <td></td>
-                  </tr>
-                  <tr class="price-list__third-line">
-                    <td>Комментарии</td>
-                    <td></td>
-                    <td class="price-list__base-third-line"><span>Комментарии</span></td>
-                    <td></td>
-                  </tr>
+              <div class="price-list__slider content-wrapper">
+                <table class="price-list__table table-price">
+                  <thead>
+                    <tr>
+                      <th class="table-price__header"></th>
+                      <th class="table-price__header">
+                        <span class="table-price__type">База</span>
+                        <span class="table-price__price">1,99 USD</span>
+                      </th>
+                      <th class="table-price__header">
+                        <span class="table-price__type">Стандарт</span>
+                        <span class="table-price__price">3,99 USD</span>
+                      </th>
+                      <th class="table-price__header">
+                        <span class="table-price__type">Анлим</span>
+                        <span class="table-price__price">9,99 USD</span>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td class="table-price__offer">Розовый фильтр</td>
+                      <td class="table-price__offer">
+                        <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                          <span class="table-price__feature-value table-price__feature-value--true">
+                            <span class="visually-hidden">Да</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="table-price__offer">
+                        <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                          <span class="table-price__feature-value table-price__feature-value--true">
+                            <span class="visually-hidden">Да</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="table-price__offer">
+                        <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                          <span class="table-price__feature-value table-price__feature-value--true">
+                            <span class="visually-hidden">Да</span>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-price__offer">Смайлики</td>
+                      <td class="table-price__offer">
+                        <div class="table-price__feature" data-feature-name="Смайлики">
+                          <span class="table-price__feature-value table-price__feature-value--false">
+                            <span class="visually-hidden">Нет</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="table-price__offer">
+                        <div class="table-price__feature" data-feature-name="Смайлики">
+                          <span class="table-price__feature-value table-price__feature-value--true">
+                            <span class="visually-hidden">Да</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="table-price__offer">
+                        <div class="table-price__feature" data-feature-name="Смайлики">
+                          <span class="table-price__feature-value table-price__feature-value--true">
+                            <span class="visually-hidden">Да</span>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-price__offer">Комментарии</td>
+                      <td class="table-price__offer">
+                        <div class="table-price__feature" data-feature-name="Комментарии">
+                          <span class="table-price__feature-value table-price__feature-value--false">
+                            <span class="visually-hidden">Нет</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="table-price__offer">
+                        <div class="table-price__feature" data-feature-name="Комментарии">
+                          <span class="table-price__feature-value table-price__feature-value--false">
+                            <span class="visually-hidden">Нет</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="table-price__offer">
+                        <div class="table-price__feature" data-feature-name="Комментарии">
+                          <span class="table-price__feature-value table-price__feature-value--true">
+                            <span class="visually-hidden">Да</span>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
+
               <p class="price-list__toggles price-list__slider-toggles">
                 <button class="price-list__toggle"></button>
                 <button class="price-list__toggle price-list__toggle-current"></button>
@@ -229,11 +303,9 @@
               </ul>
             </div>
             <div class="map">
-              <div class="map__triangle">
-                <svg width="320" height="70" viewBox="0 0 320 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M160 123L-440 0H760L160 123Z" fill="white"/>
-                </svg>
-              </div>
+              <svg class="map__triangle" width="1200" height="123" viewBox="0 0 1200 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M599.5 123L-120 0H1319L599.5 123Z" fill="white"/>
+              </svg>
               <h2 class="visually-hidden">Карта</h2>
               <iframe class="map__adaptive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003142!2d30.32085871614859!3d59.93871916905411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1630054877156!5m2!1sru!2sru" width="320" height="200" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
@@ -246,8 +318,11 @@
             <svg class="page-footer__logo-pink" width="145" height="40" viewBox="0 0 145 40" fill="none">
               <use xlink:href="img/sprite.svg#footer-logo"></use>
             </svg>
+            <svg class="page-footer__logo-pink-desktop" width="147" height="40" viewBox="0 0 147 40" fill="none">
+              <use xlink:href="img/sprite.svg#footer-desktop"></use>
+            </svg>
           </div>
-          <div class="page-footer__social">
+          <div class="page-footer__social page-footer__social-index">
             <ul class="page-footer__lists">
               <li class="page-footer__lists-item">
                 <a class="page-footer__twitter" aria-label="Наш твиттер" href="#"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
