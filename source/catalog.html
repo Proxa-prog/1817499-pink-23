@@ -20,7 +20,7 @@
         <div class="page-header__wrapper">
           <nav class="main-nav main-nav--nojs">
             <div class="content-wrapper">
-              <a class="page-header__logo" href="#" >
+              <a class="page-header__logo" href="index.html" >
                 <svg class="page-header__logo-phone" width="74" height="23">
                   <use xlink:href="img/sprite.svg#mobile-logo"></use>
                 </svg>
@@ -254,7 +254,7 @@
             </div>
 
               <div class="user-repost__container">
-                <div class="content-wrapper">
+                <div class="content-wrapper user-repost__content-wrapper">
                   <div class="user-repost__wrapper">
                     <div class="user-repost__input-wrapper">
                       <input class="user-repost__input-file visually-hidden" type="file" id="download-foto">
@@ -269,11 +269,13 @@
                               <use xlink:href="img/sprite.svg#cut"></use>
                             </svg>
                           </button>
-                          <div class="user-repost__range-controls range-controls range-controls-crop range-controls-active">
+                          <div class="user-repost__range-controls range-controls range-controls-crop user-repos__range-controls-active">
                             <div class="range-controls__scale">
                               <div class="range-controls__toggle range-controls__toggle-crop range-controls__toggle--active" aria-label="Переключатель"></div>
                             </div>
                           </div>
+
+                          <div class="user-repost__line user-repost__line-first"></div>
                         </li>
 
                         <li class="user-repost__filter-item">
@@ -287,6 +289,8 @@
                               <div class="range-controls__toggle range-controls__toggle-fill" aria-label="Переключатель"></div>
                             </div>
                           </div>
+
+                          <div class="user-repost__line user-repost__line-second"></div>
                         </li>
 
                         <li class="user-repost__filter-item">
@@ -303,7 +307,7 @@
                         </li>
                       </ul>
 
-                      <div class="user-repost__line"></div>
+                      <div class="user-repost__line user-repost__line-third"></div>
                     </div>
 
                     <div class="user-repost__catalog-button-wrapper">
