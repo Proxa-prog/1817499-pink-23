@@ -36,9 +36,9 @@ exports.styles = styles;
 /* HTML */
 
 const html = () => {
-  return gulp.src('source/*.html')
+  return gulp.src("source/*.html")
   .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest('build'));
+  .pipe(gulp.dest("build"));
 }
 
 exports.html = html;
@@ -49,8 +49,8 @@ exports.html = html;
 const script = () => {
   return gulp.src("source/js/script.js")
   .pipe(terser())
-  .pipe(rename('script.min.js'))
-  .pipe(gulp.dest('build/js'))
+  .pipe(rename("script.min.js"))
+  .pipe(gulp.dest("build/js"))
   .pipe(sync.stream());
 }
 
@@ -59,16 +59,16 @@ exports.script = script;
 /* Images */
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png,svg}')
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
   .pipe(squoosh())
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest("build/img"))
 }
 
 exports.optimizeImages = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png,svg}')
-  .pipe(gulp.dest('build/img'))
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  .pipe(gulp.dest("build/img"))
 }
 
 exports.copyImages = copyImages;
@@ -76,9 +76,9 @@ exports.copyImages = copyImages;
 /* Webp */
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src("source/img/**/*.{jpg,png}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest("build/img"))
 }
 
 exports.createWebp = createWebp;
@@ -86,12 +86,12 @@ exports.createWebp = createWebp;
 /* Sprite */
 
 const sprite = () => {
-  return gulp.src('source/img/**/*.svg')
+  return gulp.src("source/img/**/*.svg")
   .pipe(svgstore({
     inlineSvg: true
   }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
+  .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("build/img"));
 }
 
 exports.sprite = sprite;
@@ -100,14 +100,14 @@ exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src([
-    'source/fonts/*.{woff2,woff}',
-    'source/*.ico',
-    '!source/img/**/*.svg',
-    'sourse/*manifest.webmanifest',
+    "source/fonts/*.{woff2,woff}",
+    "source/*.ico",
+    "!source/img/**/*.svg",
+    "sourse/*manifest.webmanifest",
   ], {
-    base: 'source'
+    base: "source"
   })
-  .pipe(gulp.dest('build'))
+  .pipe(gulp.dest("build"))
   done();
 }
 
@@ -116,7 +116,7 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
-  return del('build');
+  return del("build");
 };
 
 // Server
@@ -124,7 +124,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
