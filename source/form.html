@@ -19,8 +19,7 @@
 
         <div class="page-header__wrapper page-header-form-wrapper">
           <nav class="main-nav main-nav--nojs">
-            <div class="content-wrapper">
-              <a class="page-header__logo" href="index.html" >
+              <a class="page-header__logo" href="index.html" aria-label="Логотип Pink">
                 <svg class="page-header__logo-phone" width="74" height="23">
                   <use xlink:href="img/sprite.svg#mobile-logo"></use>
                 </svg>
@@ -34,7 +33,6 @@
               <button class="main-nav__toggle main-nav__toggle--closed">
                 <span class="visually-hidden">Открыть меню</span>
               </button>
-            </div>
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list">
                   <li class="main-nav__list-item">
@@ -107,27 +105,27 @@
                   <ul class="user-achievements__list">
                     <li class="user-achievements__item">
                       <input class="user-achievements__input visually-hidden" type="checkbox" checked id="shark">
-                      <label class="user-achievements__label" for="shark">Сделал селфи с акулой</label>
+                      <label class="user-achievements__label" for="shark" tabindex="0">Сделал селфи с акулой</label>
                     </li>
                     <li class="user-achievements__item">
                       <input class="user-achievements__input visually-hidden" type="checkbox" checked id="beach">
-                      <label class="user-achievements__label" for="beach">Обгорел на пляже</label>
+                      <label class="user-achievements__label" for="beach" tabindex="0">Обгорел на пляже</label>
                     </li>
                     <li class="user-achievements__item">
                       <input class="user-achievements__input visually-hidden" type="checkbox" id="norris">
-                      <label class="user-achievements__label" for="norris">Видел Чака Норриса</label>
+                      <label class="user-achievements__label" for="norris" tabindex="0">Видел Чака Норриса</label>
                     </li>
                     <li class="user-achievements__item">
                       <input class="user-achievements__input visually-hidden" type="checkbox" id="souvenir">
-                      <label class="user-achievements__label" for="souvenir">Накупил сувениров</label>
+                      <label class="user-achievements__label" for="souvenir" tabindex="0">Накупил сувениров</label>
                     </li>
                     <li class="user-achievements__item">
                       <input class="user-achievements__input visually-hidden" type="checkbox" checked id="tower">
-                      <label class="user-achievements__label" for="tower">Удержал башню</label>
+                      <label class="user-achievements__label" for="tower" tabindex="0">Удержал башню</label>
                     </li>
                     <li class="user-achievements__item">
                       <input class="user-achievements__input visually-hidden" type="checkbox" id="hotel">
-                      <label class="user-achievements__label" for="hotel">Разгромил отель</label>
+                      <label class="user-achievements__label" for="hotel" tabindex="0">Разгромил отель</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -160,15 +158,15 @@
                   <ul class="user-os__list">
                     <li class="user-os__item">
                       <input class="user-os__input visually-hidden" type="radio" checked value="iOS" id="ios" name="os">
-                      <label class="user-os__label" for="ios" >Pink для iOS</label>
+                      <label class="user-os__label" for="ios" tabindex="0">Pink для iOS</label>
                     </li>
                     <li class="user-os__item">
                       <input class="user-os__input visually-hidden" type="radio" value="Android" id="android" name="os">
-                      <label class="user-os__label" for="android" >Pink на Android</label>
+                      <label class="user-os__label" for="android" tabindex="0">Pink на Android</label>
                     </li>
                     <li class="user-os__item">
                       <input class="user-os__input visually-hidden" type="radio" value="iOS" id="windows" name="os">
-                      <label class="user-os__label" for="windows" >Windows Phone</label>
+                      <label class="user-os__label" for="windows" tabindex="0">Windows Phone</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -193,7 +191,7 @@
 
       <footer class="page-footer">
         <div class="page-footer__wrapper content-wrapper">
-          <div class="page-footer__logo page-footer__logo-form">
+          <div class="page-footer__logo page-footer__logo-form" aria-label="Логотип Pink">
             <svg class="page-footer__logo-pink" width="145" height="40" viewBox="0 0 145 40" fill="none">
               <use xlink:href="img/sprite.svg#footer-logo"></use>
             </svg>
@@ -235,7 +233,8 @@
         <div class="content-wrapper modal-error__wrapper">
           <p class="modal-error__heading">Что-то пошло не так!</p>
           <p class="modal-error__description">Проверьте поля, выделенные&nbsp;<br>красным, скорее всего вы забыли их заполнить</p>
-
+        </div>
+        <div class="modal-error__button-wrapper">
           <button class="modal-error__button button">Ok</button>
         </div>
       </div>
@@ -243,7 +242,7 @@
       <div class="modal-sent">
         <div class="content-wrapper modal-sent__wrapper">
           <p class="modal-sent__heading">Ваша заявка отправлена</p>
-          <p class="modal-sent__description">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим её и<br> оповестим вас.</p>
+          <p class="modal-sent__description">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим её и&nbsp;<br>оповестим вас.</p>
         </div>
         <div class="modal-sent__wrapper-close">
           <div class="content-wrapper modal-sent__wrapper">

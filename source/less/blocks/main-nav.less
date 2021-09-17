@@ -78,7 +78,7 @@
 
 .main-nav__list-item {
   width: 100%;
-  height: 66px;
+  height: 64px;
   background-color: #283645;
   box-shadow: 0 1px 0 @color-hard-black, inset 0 1px 0 rgba(255, 255, 255, 0.15);
   padding: 15px;
@@ -105,8 +105,16 @@
     }
   }
 
+  &:first-child {
+    height: 69px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 100%;
+
+    &:first-child {
+      height: 109px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -198,6 +206,10 @@
   background-color: transparent;
   border: none;
   z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    top: 53px;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;

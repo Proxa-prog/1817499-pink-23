@@ -58,16 +58,16 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
-    margin-bottom: 0;
+    margin-bottom: -1px;
   }
 
   a {
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 24px;
     line-height: 33px;
     color: @color-pink;
-    cursor: default;
+    display: block;
   }
 
   .contacts__item-mail {
@@ -85,12 +85,18 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 28px;
 
+    p {
+      margin-bottom: 3px;
+    }
+
     &:nth-child(1) {
       width: 1fr;
+      padding-right: 9px;
     }
 
     &:nth-child(2) {
       width: 1fr;
+      padding-left: 14px;
     }
 
     &:nth-child(3) {
@@ -125,5 +131,25 @@
     a {
       font-weight: 400;
     }
+  }
+}
+
+.contacts__item-address {
+  cursor: default;
+
+  address {
+    font-style: normal;
+  }
+}
+
+.contacts__item-phone-number {
+  cursor: pointer;
+
+  &:hover {
+    color: @color-text-black;
+  }
+
+  &:focus {
+    opacity: 0.3;
   }
 }

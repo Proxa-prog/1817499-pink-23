@@ -25,7 +25,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 68px;
-    padding-top: 59px;
+    padding-top: 62px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 200px 200px;
@@ -49,12 +49,13 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    padding-top: 66px;
+    padding-top: 58px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
   }
 }
 
@@ -86,65 +87,64 @@
   }
 }
 
+.user-repost__input-label {
+  cursor: pointer;
+}
+
 .user-repost__filter-list {
   .ul_style();
   display: flex;
   flex-wrap: wrap;
-  margin-top: 41px;
-  margin-bottom: 29px;
+  margin-top: 64px;
+  margin-bottom: 70px;
+  padding: 0 21px;
 
   @media (min-width: @tablet-width) {
-    display: inline;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin-top: 0;
   }
 }
 
 .user-repost__filter-item {
+  width: 33%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-  }
-}
+    margin-bottom: 25px;
 
-.user-repost__filter-item:nth-child(1) {
-  margin: 24px 17px 39px 31px;
-
-  @media (min-width: @tablet-width) {
-    margin: 2px 17px 24px 33px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    margin: -11px 21px 16px -5px;
     width: 454px;
-  }
-}
-
-.user-repost__filter-item:nth-child(2) {
-  margin: 28px 10px 37px 8px;
-
-  @media (min-width: @tablet-width) {
-    margin: 23px 10px 21px 33px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 16px 10px 8px -4px;
-    width: 454px;
-  }
-}
-
-.user-repost__filter-item:nth-child(3) {
-  margin: 33px 34px 40px 16px;
-
-  @media (min-width: @tablet-width) {
-    margin: 10px 0 0 34px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 10px 0 33px -5px;
+    margin-bottom: 15px;
   }
 }
 
 .user-repost-button {
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .user-repost__range-controls-all {
@@ -218,7 +218,7 @@
   }
 }
 
-.user-repos__range-controls-active {
+.user-repost__range-controls-active {
   display: block;
   position: absolute;
 

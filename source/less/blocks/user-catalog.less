@@ -15,12 +15,13 @@
 
 .user-catalog__item {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin: 0 0 20px 0;
 
   @media (min-width: @tablet-width) {
     width: 300px;
-    height: 455px;
+    min-height: 455px;
     margin: 0;
     margin-bottom: 20px;
 
@@ -31,8 +32,8 @@
 
   @media (min-width: @desktop-width) {
     width: 300px;
-    height: 555px;
-    margin-bottom: 56px;
+    min-height: 555px;
+    margin-bottom: 54px;
 
     &:nth-child(2n + 1) {
       margin-right: 0;
@@ -116,7 +117,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 625px;
+    margin-left: auto;
   }
 }
 
@@ -205,4 +206,8 @@
 
 .user-catalog__text-panorama {
   margin-bottom: 11px;
+}
+
+.user-catalog__pucture-wrapper {
+  line-height: 0;
 }

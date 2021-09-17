@@ -62,6 +62,15 @@
   font-size: 18px;
   line-height: 30px;
   text-align: left;
+  padding: 0 68px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 128px;
+  }
 }
 
 .user-os__item {
@@ -79,7 +88,6 @@
 }
 
 .user-os__label {
-  margin-left: 67px;
   position: relative;
   font-weight: 300;
 
@@ -92,12 +100,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-left: 119px;
     font-weight: 300;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 130px;
   }
 }
 
